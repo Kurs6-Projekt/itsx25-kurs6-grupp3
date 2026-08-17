@@ -17,4 +17,4 @@ En uppgift räknas som färdig när:
 - filerna är korrekt namngivna och sparade i GitHub
 - ändringarna har pushats till repositoryts `main`-gren
 - uppgiftens status har ändrats till **Done**
-- resultatet kan visas eller presenteras för läraren
+- resultatet kan visas eller presenteras för läraren utan att vi behöver skämmas
