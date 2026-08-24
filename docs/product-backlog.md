@@ -25,3 +25,16 @@
 - **Could:** Koppling till ytterligare säkerhetskontroller och visuell MITRE ATT&CK-mappning.
 
 Must-punkterna etablerar gruppens arbetssätt och den kunskapsgrund som krävs för det fortsatta projektet. Should-punkterna bygger vidare på grundanalysen. Could-punkterna förbättrar slutresultatet, men är inte nödvändiga för att projektarbetet ska kunna påbörjas.
+
+## Uppföljning efter Workshop 2
+
+Vi har följt upp de delar i backloggen som hör till MITRE ATT&CK och hotanalysen.
+
+- Förstå grunderna i MITRE ATT&CK - Done
+- Förstå Tactics och Techniques - Done
+- Förbereda hotanalys - Done
+- Förbereda Blue Team-perspektiv - Done
+- Identifiera relevanta informationskällor - Påbörjad
+
+Attackkedjan är skapad, dokumenterad och granskad av gruppen. Det vi fortfarande är osäkra på finns dokumenterat i Workshop 2-filen.
+

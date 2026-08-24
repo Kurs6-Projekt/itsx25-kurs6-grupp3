@@ -18,3 +18,18 @@ En uppgift räknas som färdig när:
 - ändringarna har pushats till repositoryts `main`-gren
 - uppgiftens status har ändrats till **Done**
 - resultatet kan visas eller presenteras för läraren utan att vi behöver skämmas
+
+## Uppföljning efter Workshop 2
+
+### Sprint Goal
+
+Vi bedömer att sprintmålet är uppnått. Gruppen har fått arbetssättet på plats och vi har nu använt MITRE ATT&CK för att skapa vår första attackkedja och hotanalys.
+
+### Definition of Done
+
+Hotanalysen från Workshop 2 har gåtts igenom och godkänts av gruppen. Den är dokumenterad i GitHub och pushad till main.
+
+Vi bedömer därför att den delen är Done enligt vår Definition of Done.
+
+De saker vi fortfarande är osäkra på finns kvar i dokumentationen så att de går att följa upp senare.
+
