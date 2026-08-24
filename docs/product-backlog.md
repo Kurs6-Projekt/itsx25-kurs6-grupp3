@@ -34,7 +34,7 @@ Vi har följt upp de delar i backloggen som hör till MITRE ATT&CK och hotanalys
 - Förstå Tactics och Techniques - Done
 - Förbereda hotanalys - Done
 - Förbereda Blue Team-perspektiv - Done
-- Identifiera relevanta informationskällor - Påbörjad
+- Identifiera relevanta informationskällor - Done
 
 Attackkedjan är skapad, dokumenterad och granskad av gruppen. Det vi fortfarande är osäkra på finns dokumenterat i Workshop 2-filen.
 
