@@ -2,7 +2,7 @@
 
 **Kurs:** ITSX25 Kurs 6
 **Namn:** André Edvardsson
-**Datum:** ____________________
+**Datum:** 2026-08-31
 
 ## Syfte och avgränsning
 
@@ -14,11 +14,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 > Beskriv om och hur en AI-assistent har använts samt vad du har kontrollerat manuellt.
 
-**Verktyg som använts:**
+**Verktyg som använts:** Codex, som är en AI-assistent.
 
-**Hur verktyget användes:**
+**Hur verktyget användes:** Jag använde AI för att skapa en tydlig struktur, få hjälp med formuleringar och kontrollera att alla frågor blev besvarade.
 
-**Det jag kontrollerade manuellt:**
+**Det jag kontrollerade manuellt:** Teknikernas namn, ID och tactics mot MITRE ATT&CK samt att svaren stämmer med gruppens scenario och uttrycker mina egna resonemang.
 
 ---
 
@@ -32,9 +32,13 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+MITRE ATT&CK är ett ramverk som samlar information om hur angripare brukar bete sig. Ett säkerhetsteam kan använda det för att beskriva en attack på ett mer ordnat sätt. I stället för att bara säga att ett konto blev kapat kan man visa vilket mål angriparen hade och vilka tekniker som användes på vägen.
 
+En viktig del är att ATT&CK ger ett gemensamt språk. Teknikerna har namn och ID, vilket gör det lättare för olika personer att förstå varandra. En analytiker kan till exempel hänvisa till `T1566.002 – Spearphishing Link` i stället för att bara skriva att användaren klickade på en misstänkt länk.
 
+Ramverket kan också användas ur ett försvarsperspektiv. När teamet har identifierat relevanta tekniker kan det undersöka vilka loggar och signaler som finns, vad som går att upptäcka och var försvaret har luckor. Det hjälper teamet att prioritera vilka kontroller som behöver förbättras.
+
+ATT&CK ger däremot inte hela svaret. Teamet behöver fortfarande förstå sin egen miljö och bedöma om tekniken verkligen passar det som har observerats. Jag ser därför ATT&CK som ett stöd för analys, dokumentation och kommunikation.
 
 ### Uppgift 2
 
@@ -44,9 +48,13 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+ATT&CK ska inte användas som en checklista för att genomföra attacker. Ramverket beskriver beteenden som har observerats i verkliga händelser, men syftet i den här uppgiften är att förstå och försvara sig mot dem. Det visar vad en angripare kan försöka uppnå och vilka typer av metoder som kan förekomma.
 
+Ett analysramverk hjälper ett säkerhetsteam att sortera information. Teamet kan koppla observationer till tactics och techniques, jämföra olika händelser och se vilka delar av en attackkedja som behöver undersökas mer. En angreppsinstruktion skulle däremot beskriva exakt hur någon ska göra, till exempel konkreta kommandon eller steg för att utnyttja ett system. Sådana detaljer behövs inte för att besvara försvarsfrågorna.
 
+Det finns också en risk att en checklista blir missvisande. Att en organisation har en kontroll mot en teknik betyder inte att alla varianter av tekniken är hanterade. Angripare kan ändra sitt arbetssätt, och samma observation kan ibland passa in på flera tekniker.
+
+I vårt arbete använder vi därför ATT&CK för att beskriva scenariot, kontrollera våra antaganden och formulera frågor om upptäckt och skydd. Fokus ligger på vad säkerhetsteamet behöver se och följa upp, inte på att lära ut hur attacken genomförs.
 
 ### Uppgift 3
 
@@ -58,11 +66,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | # | Tactic | Övergripande betydelse |
 | ---: | --- | --- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
+| 1 | Initial Access | Angriparen försöker få en första väg in i organisationens miljö. |
+| 2 | Credential Access | Angriparen försöker få tillgång till lösenord eller annat material som kan användas för inloggning. |
+| 3 | Discovery | Angriparen försöker förstå miljön, till exempel vilka konton, system och resurser som finns. |
+| 4 | Collection | Angriparen samlar information som är intressant för målet med attacken. |
+| 5 | Impact | Angriparen försöker påverka verksamheten, informationen eller tillgängligheten. |
 
 ### Uppgift 4
 
@@ -72,9 +80,13 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+MITRE ATT&CK kan fungera som ett gemensamt språk mellan red team, blue team och ledning. Red team kan använda teknikerna för att beskriva vilka beteenden som ska simuleras i ett godkänt test. Blue team kan använda samma tekniker för att undersöka om beteendena går att upptäcka och vilka loggar eller kontroller som behövs.
 
+Det gemensamma språket minskar risken för missförstånd. Om båda teamen använder samma tekniknamn och ID blir det tydligare vad som testades och vad resultatet betyder. Det ger också bättre spårbarhet. En observation i en logg kan kopplas till en teknik, som sedan kan kopplas till en detektionsregel, en säkerhetsåtgärd eller en uppgift i backloggen.
 
+För ledningen kan ATT&CK hjälpa till att göra tekniska resultat mer begripliga. Ledningen behöver inte känna till varje detalj, men kan få en bild av vilka delar av en attackkedja organisationen kan upptäcka och var det finns luckor. Resultatet kan exempelvis visa att organisationen har bra skydd mot nätfiske men saknar tillräcklig övervakning efter en lyckad inloggning.
+
+ATT&CK kan även stödja prioritering. Teamet kan välja de tekniker som är mest relevanta för den egna hotbilden och börja med de största riskerna. Det är viktigt att inte försöka täcka hela matrisen direkt. Valen behöver motiveras och följas upp så att både tekniker och ledning förstår varför en åtgärd prioriteras.
 
 ---
 
@@ -90,9 +102,9 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Begrepp | Förklaring med egna ord | Del av mitt defensiva exempel |
 | --- | --- | --- |
-| Tactic |  |  |
-| Technique |  |  |
-| Procedure |  |  |
+| Tactic | Angriparens övergripande mål, alltså varför något görs. | Målet är att få en första väg in i Microsoft 365-miljön. |
+| Technique | Metoden eller beteendet som används för att nå målet. | Ett mejl innehåller en länk till en falsk inloggningssida. |
+| Procedure | Hur tekniken visar sig i det aktuella scenariot. | Mejlet ser ut att komma från en leverantör och handlar om en uppdaterad offert. |
 
 ### Uppgift 6
 
@@ -104,9 +116,9 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | # | Tactic | Technique och ID | Kort procedure-beskrivning |
 | ---: | --- | --- | --- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
+| 1 | Initial Access | T1566.002 – Spearphishing Link | Användaren får ett leverantörsmejl med en länk som leder till en falsk Microsoft 365-inloggning. |
+| 2 | Discovery | T1087.004 – Account Discovery: Cloud Account | Efter inloggningen försöker angriparen förstå vilka användare och roller som finns i molnmiljön. |
+| 3 | Collection | T1114.003 – Email Forwarding Rule | En regel skapas som kan skicka utvalda mejl vidare till en extern adress. |
 
 ### Uppgift 7
 
@@ -116,15 +128,15 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Vald tactic
 
-**Tactic:**
+**Tactic:** Initial Access
 
 #### Mitt svar
 
 | # | Technique och ID | Varför passar tekniken i tacticen? |
 | ---: | --- | --- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
+| 1 | T1566 – Phishing | Phishing används för att försöka få den första kontakten eller åtkomsten genom att lura en användare. |
+| 2 | T1078 – Valid Accounts | Ett giltigt men kapat konto kan användas för att komma in på ett sätt som liknar en vanlig inloggning. |
+| 3 | T1190 – Exploit Public-Facing Application | En sårbar tjänst som är tillgänglig från internet kan ge angriparen en första väg in. |
 
 ### Uppgift 8
 
@@ -134,9 +146,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+Det kan vara svårt eftersom en observation sällan berättar hela historien. En ovanlig inloggning visar till exempel att något avviker, men inte automatiskt varför det hände eller vem som låg bakom. Samma händelse kan också vara legitim, till exempel om en användare reser eller byter enhet.
 
+Kontexten är därför viktig. Analytikern behöver veta hur användaren brukar arbeta, vilka system som berörs och vad som hände före och efter observationen. Datakvaliteten påverkar också bedömningen. Om viktiga loggar saknas eller tiderna inte stämmer blir mappningen mer osäker.
 
+För att minska risken för fel behöver man läsa hela beskrivningen på MITRE ATT&CK, jämföra med fler källor och dokumentera varför tekniken valdes. Om det finns flera möjliga tekniker bör även det skrivas ner. En granskning av någon annan i gruppen kan hjälpa till att upptäcka en för snabb eller felaktig slutsats.
 
 ---
 
@@ -152,11 +166,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Steg | Tactic | Technique och ID | Övergripande händelse |
 | ---: | --- | --- | --- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Initial Access | T1566.002 – Spearphishing Link | Ett falskt leverantörsmejl leder till en falsk Microsoft 365-sida. |
+| 2 | Initial Access | T1078.004 – Valid Accounts: Cloud Accounts | De komprometterade uppgifterna används för att logga in på molnkontot. |
+| 3 | Discovery | T1087.004 – Account Discovery: Cloud Account | Angriparen undersöker vilka andra konton och roller som finns. |
+| 4 | Collection | T1213.002 – Data from Information Repositories: SharePoint | Information söks fram i organisationens SharePoint. |
+| 5 | Collection | T1114.003 – Email Collection: Email Forwarding Rule | En regel skapas för att vidarebefordra vissa mejl. |
 
 ### Uppgift 10
 
@@ -168,11 +182,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Steg | Varför? – Tactic | Hur? – Technique | Vad såg vi? – Procedure/observation |
 | ---: | --- | --- | --- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Få en första kontakt med användaren | Skicka en riktad nätfiskelänk | Ett mejl som liknar kommunikation från en känd leverantör. |
+| 2 | Få åtkomst till molnmiljön | Använda ett giltigt men kapat konto | En inloggning sker med användarens riktiga konto från en avvikande session. |
+| 3 | Förstå organisationens konton | Söka efter molnkonton och roller | Kontot börjar göra ovanliga sökningar efter andra användare. |
+| 4 | Samla verksamhetsinformation | Söka i SharePoint | Ovanligt många dokument eller känsliga områden öppnas. |
+| 5 | Fortsätta samla mejl | Skapa en vidarebefordringsregel | En ny regel skickar mejl till en extern adress. |
 
 ### Uppgift 11
 
@@ -184,9 +198,9 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Osäkert steg | Vad är osäkert? | Vad behöver jag veta eller kontrollera? |
 | --- | --- | --- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Steg 1 till 2 | Vi antar att användaren faktiskt lämnar sina uppgifter och att angriparen kan logga in. | Information om MFA, inloggningsförloppet och om länken verkligen samlade in uppgifter. |
+| Steg 3 | Vanliga katalogsökningar kan likna legitimt arbete. | En jämförelse med användarens normala aktivitet och relevanta katalogloggar. |
+| Steg 5 | En vidarebefordringsregel kan vara tillåten och legitim. | Vem som skapade regeln, vart mejlen skickas och om extern vidarebefordran är normal. |
 
 ### Uppgift 12
 
@@ -197,15 +211,15 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 #### Min attackkedja
 
 ```text
-[Steg 1]
+[Falsk leverantörslänk – T1566.002]
     ↓
-[Steg 2]
+[Kapat molnkonto – T1078.004]
     ↓
-[Steg 3]
+[Kartläggning av konton – T1087.004]
     ↓
-[Steg 4]
+[Sökning i SharePoint – T1213.002]
     ↓
-[Steg 5]
+[Vidarebefordring av mejl – T1114.003]
 ```
 
 ---
@@ -222,11 +236,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Steg | Technique | Försvarsfråga |
 | ---: | --- | --- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
+| 1 | T1566.002 | Hur kan vi se att länken leder till en domän som inte tillhör den förväntade tjänsten? |
+| 2 | T1078.004 | Hur upptäcker vi att en inloggning med rätt konto ändå är ovanlig? |
+| 3 | T1087.004 | Hur märker vi att kontot börjar söka efter fler användare än normalt? |
+| 4 | T1213.002 | Hur kan vi upptäcka ovanligt omfattande läsning eller nedladdning från SharePoint? |
+| 5 | T1114.003 | Hur upptäcker vi en ny regel som vidarebefordrar mejl till en extern adress? |
 
 ### Uppgift 14
 
@@ -238,8 +252,8 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Technique och ID | Möjliga typer av detektionssignaler | Begränsningar eller osäkerheter |
 | --- | --- | --- |
-|  |  |  |
-|  |  |  |
+| T1078.004 – Valid Accounts: Cloud Accounts | Avvikande plats, ny enhet, ovanlig tidpunkt, förändrade MFA-händelser och annat beteende efter inloggningen. | En legitim användare kan resa eller byta enhet, så en enda signal räcker inte alltid. |
+| T1114.003 – Email Forwarding Rule | Skapande eller ändring av regler, extern mottagare och en regel som skapas från en ovanlig session. | Vidarebefordring kan vara legitim och behöver jämföras med organisationens regler och användarens normala arbete. |
 
 ### Uppgift 15
 
@@ -251,8 +265,8 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | Technique och ID | Organisatoriska åtgärder | Tekniska åtgärder | Processmässiga åtgärder |
 | --- | --- | --- | --- |
-|  |  |  |  |
-|  |  |  |  |
+| T1566.002 – Spearphishing Link | Utbilda användare att kontrollera länkar och rapportera misstänkta mejl. | E-postfiltrering, domänkontroller och skydd mot kända skadliga länkar. | Ha en tydlig rutin för rapportering och snabb spärr av misstänkta länkar. |
+| T1078.004 – Valid Accounts: Cloud Accounts | Informera användare om att aldrig godkänna oväntade MFA-förfrågningar. | MFA, villkorsstyrd åtkomst och begränsade behörigheter. | Regelbunden granskning av inloggningar och snabb återställning av misstänkta konton. |
 
 ### Uppgift 16
 
@@ -262,9 +276,13 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+En attackkedja hjälper säkerhetsteamet att se en händelse som flera steg i stället för ett enda larm. Det gör det lättare att förstå hur en angripare kan gå från första kontakt till att få tillgång till information. När stegen finns dokumenterade kan teamet diskutera var attacken hade kunnat upptäckas eller stoppas.
 
+Kedjan kan också användas för lärande. Efter en incident eller övning kan teamet jämföra vad man förväntade sig med det som faktiskt syntes i loggarna. Om ett steg inte gick att se kan det betyda att loggning saknas eller att en detektionsregel behöver förbättras. Om ett larm kom men ingen reagerade kan rutinen för hantering behöva ändras.
 
+För prioritering kan teamet bedöma vilka steg som har störst risk och vilka skydd som ger bäst effekt. Det är ofta bättre att börja med några relevanta tekniker än att försöka täcka hela ATT&CK-matrisen. I vårt scenario kan det vara viktigt att både minska risken för nätfiske och upptäcka vad som händer efter en lyckad molninloggning.
+
+Kedjan behöver följas upp när miljön eller hotbilden ändras. Teamet kan lägga förbättringar i backloggen, ge dem ansvarig person och kontrollera senare om skyddet har blivit bättre. På det sättet blir attackkedjan ett underlag för fortsatt säkerhetsarbete och inte bara en bild i en rapport.
 
 ---
 
@@ -280,9 +298,10 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | # | Källa och länk | Vad bidrar källan med? | Hämtad/kontrollerad datum |
 | ---: | --- | --- | --- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
+| 1 | [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/) | Visar ramverkets tactics och vilka tekniker som hör till dem. | 2026-08-31 |
+| 2 | [MITRE – Spearphishing Link](https://attack.mitre.org/techniques/T1566/002/) | Ger teknikens namn, ID, tactic och beskrivning. | 2026-08-31 |
+| 3 | [MITRE – Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004/) | Förklarar hur giltiga molnkonton kan missbrukas och vilka tactics som är relevanta. | 2026-08-31 |
+| 4 | [CISA – Best Practices for MITRE ATT&CK Mapping](https://www.cisa.gov/news-events/news/best-practices-mitre-attckr-mapping) | Ger vägledning om att mappa observationer noggrant och dokumentera sammanhanget. | 2026-08-31 |
 
 ### Uppgift 18
 
@@ -292,9 +311,9 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+Jag börjar med att läsa teknikens fullständiga beskrivning på MITRE ATT&CK och kontrollerar att både beteendet och tacticen passar vårt scenario. Jag väljer alltså inte en teknik bara för att namnet låter rätt. Sedan skriver jag en kort motivering som kopplar observationen i scenariot till teknikens beskrivning.
 
-
+Om information saknas markerar jag vad som är ett antagande och vad som faktiskt är känt. Jag jämför också med andra möjliga tekniker om mappningen är osäker. Källan och länken dokumenteras så att någon annan kan kontrollera samma information. Till sist låter jag en annan gruppmedlem läsa mappningen. Om personen inte förstår sambandet eller hittar en bättre teknik behöver valet diskuteras och eventuellt ändras.
 
 ### Uppgift 19
 
@@ -304,11 +323,13 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- Scenariot och syftet med analysen är tydligt beskrivna.
+- Varje steg har en motiverad tactic, technique och procedure.
+- Teknikernas namn och ID har kontrollerats mot MITRE ATT&CK.
+- Försvarsfrågor och relevanta osäkerheter är dokumenterade.
+- Källorna är angivna och går att öppna.
+- Minst en annan person har granskat analysen.
+- Synpunkter från granskningen är hanterade och statusen är uppdaterad.
 
 ### Uppgift 20
 
@@ -318,9 +339,13 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-<!-- Skriv ditt svar här. -->
+En hotanalys blir användbar när mottagaren kan förstå vad som har analyserats, varför det är relevant och hur slutsatserna togs fram. Texten behöver därför ha ett tydligt scenario och en logisk struktur. Begrepp och förkortningar bör förklaras så att även någon som inte gjorde analysen kan följa med.
 
+Spårbarhet är också viktigt. Det ska gå att se vilka källor som användes, vilka observationer som stödjer mappningen och vad som bara är ett antagande. MITRE-tekniker bör ha både namn, ID och länk. Om analysen innehåller osäkerheter ska de skrivas ut i stället för att döljas.
 
+Mottagaren påverkar hur resultatet presenteras. En teknisk analytiker kan behöva mer information om loggar och signaler, medan en chef främst behöver förstå risken, påverkan och vilka åtgärder som bör prioriteras. Det viktigaste bör därför komma fram tydligt utan att läsaren behöver leta i hela dokumentet.
+
+Till sist behöver analysen ge stöd för nästa steg. Det kan vara försvarsfrågor, rekommenderade kontroller eller nya backlog items. Då blir analysen något som går att använda i fortsatt arbete och inte bara en beskrivning av vad som redan har hänt.
 
 ---
 
@@ -336,11 +361,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 | # | Nytt eller ändrat backlog item | Kort beskrivning | Prioritet | Motivering |
 | ---: | --- | --- | --- | --- |
-| 1 |  |  | Must/Should/Could |  |
-| 2 |  |  | Must/Should/Could |  |
-| 3 |  |  | Must/Should/Could |  |
-| 4 |  |  | Must/Should/Could |  |
-| 5 |  |  | Must/Should/Could |  |
+| 1 | Identifiera relevanta Microsoft 365-loggar | Ta reda på vilka loggar som visar inloggningar, SharePoint-åtkomst och regeländringar. | Must | Vi behöver veta vilket underlag som krävs för att upptäcka kedjan. |
+| 2 | Undersöka MFA i scenariot | Beskriv hur MFA påverkar användningen av stulna inloggningsuppgifter. | Must | Övergången från nätfiske till kapat konto är en viktig osäkerhet. |
+| 3 | Definiera normalt användarbeteende | Bestäm vilka avvikelser som är relevanta för kontot. | Should | Det blir lättare att skilja legitim aktivitet från misstänkt aktivitet. |
+| 4 | Granska extern vidarebefordring | Undersök policy och övervakning för regler som skickar mejl externt. | Should | Regeln kan vara både legitim och skadlig. |
+| 5 | Skapa ATT&CK-visualisering | Lägg in kedjan i ATT&CK Navigator eller ett tydligt diagram. | Could | Det förbättrar presentationen men behövs inte för grundanalysen. |
 
 ### Uppgift 22
 
@@ -350,11 +375,11 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-**Nuvarande Sprint Goal:**
+**Nuvarande Sprint Goal:** Sprintens mål är att skapa ett gemensamt arbetssätt och ett dokumenterat underlag som gör gruppen redo att påbörja en MITRE ATT&CK-baserad hotanalys.
 
-**Min bedömning:**
+**Min bedömning:** Målet är fortfarande relevant och vi har till stor del uppnått det. Gruppen har skapat en attackkedja, mappat fem tekniker och dokumenterat försvarsfrågor och osäkerheter.
 
-**Eventuell justering:**
+**Eventuell justering:** Nästa sprintmål bör fokusera mer på vilka loggar, signaler och skydd som behövs för att upptäcka och begränsa kedjan.
 
 ### Uppgift 23
 
@@ -364,8 +389,8 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Mitt svar
 
-1.
-2.
+1. Vilka delar av attackkedjan kunde vi mappa med bra underlag, och vilka bygger fortfarande mest på antaganden?
+2. Vilken förbättring bör prioriteras först för att göra analysen mer användbar ur ett Blue Team-perspektiv?
 
 ### Uppgift 24
 
@@ -375,12 +400,12 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 #### Min statusrapport
 
-- **Detta gjorde vi:**
-- **Detta blev klart:**
-- **Detta blev också klart:**
-- **Detta är fortfarande oklart:**
-- **Detta behöver följas upp:**
-- **Detta vill vi ändra eller förbättra:**
+- **Detta gjorde vi:** Vi valde ett scenario med ett kapat Microsoft 365-konto och byggde en attackkedja med fem steg.
+- **Detta blev klart:** Alla steg kopplades till tactics, techniques och ATT&CK-ID.
+- **Detta blev också klart:** Vi skrev minst en försvarsfråga per steg och dokumenterade våra viktigaste osäkerheter.
+- **Detta är fortfarande oklart:** Vi vet inte exakt vilka Microsoft 365-loggar som ger bäst möjlighet att upptäcka hela kedjan.
+- **Detta behöver följas upp:** MFA, normalt användarbeteende och extern vidarebefordring behöver undersökas mer.
+- **Detta vill vi ändra eller förbättra:** Vi vill uppdatera backloggen och skapa en tydligare visuell ATT&CK-mappning.
 
 ---
 
@@ -392,55 +417,37 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 ### Mål med analysen
 
-<!-- Skriv här. -->
-
-
+Den frivilliga fördjupningsutmaningen har inte genomförts.
 
 ### Attackkedja
 
-<!-- Skriv eller rita kedjan här. -->
-
-
+Ej genomförd.
 
 ### TTP-tabell
 
 | Steg | Tactic | Technique | Procedure/observation |
 | ---: | --- | --- | --- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| – | Ej genomförd | – | – |
 
 ### Försvarsfrågor
 
-<!-- Skriv här. -->
-
-
+Ej genomförd.
 
 ### Källor
 
-<!-- Skriv här. -->
-
-
+Ej genomförd.
 
 ### Osäkerheter
 
-<!-- Skriv här. -->
-
-
+Ej genomförd.
 
 ### Uppdaterad backlog
 
-<!-- Skriv här. -->
-
-
+Ej genomförd.
 
 ### Förslag till nästa sprint
 
-<!-- Skriv här. -->
-
-
+Ej genomförd.
 
 ---
 
