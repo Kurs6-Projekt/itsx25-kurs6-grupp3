@@ -18,7 +18,7 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 **Hur verktyget användes:** Jag använde AI för att skapa en tydlig struktur, få hjälp med formuleringar och kontrollera att alla frågor blev besvarade.
 
-**Det jag kontrollerade manuellt:** Teknikernas namn, ID och tactics mot MITRE ATT&CK samt att svaren stämmer med gruppens scenario och uttrycker mina egna resonemang.
+**Det jag kontrollerade manuellt:** Jag kontrollerade informationen om de valda teknikerna på MITRE ATT&CK och jämförde den med gruppens scenario.
 
 ---
 
