@@ -1,0 +1,362 @@
+Del 1 - Förstå MITRE ATT&CK som analysramverk
+Uppgift 1
+Beskriv med egna ord vad MITRE ATT&CK används till i ett säkerhetsteam.
+Svarsinstruktion: Skriv 150-250 ord. Fokusera på analys, språk, struktur och försvarsperspektiv.
+
+MITRE ATT&CK är ett analysramverk som används av säkerhetsteam för att beskriva och förstå hur olika typer av cyberangrepp kan gå till. Ramverket ger teamet ett gemensamt språk för att prata om angripares beteenden, istället för att bara beskriva enskilda incidenter eller verktyg.
+ATT&CK delar upp angripares aktiviteter i olika tactics, techniques och procedures. Tactics beskriver angriparens mål, medan techniques beskriver olika metoder som kan användas för att nå dessa mål. Procedures beskriver hur en viss teknik har observerats i ett specifikt sammanhang.
+För ett säkerhetsteam kan detta göra analysen mer strukturerad. Exempelvis kan en observation från loggar jämföras med kända tekniker i ATT&CK. Teamet kan då undersöka vilka delar av en möjlig attackkedja som har observerats och vilka delar som fortfarande är osäkra.
+ATT&CK kan även användas för att identifiera luckor i försvaret. Om organisationen exempelvis har svårt att upptäcka vissa typer av aktiviteter kan detta bli underlag för nya detektionsregler, bättre loggning eller andra säkerhetsåtgärder.
+På så sätt fungerar ATT&CK främst som ett gemensamt analys- och försvarsverktyg.
+
+
+Uppgift 2
+Förklara varför ATT&CK inte ska användas som en checklista för att “göra attacker”.
+Svarsinstruktion: Skriv 150-250 ord. Beskriv skillnaden mellan analysramverk och angreppsinstruktion.
+
+MITRE ATT&CK ska inte ses som en checklista över saker som en angripare ska göra. Ramverket är framför allt skapat för att beskriva och analysera angripares beteenden ur ett säkerhets- och försvarsperspektiv.
+En viktig skillnad är att ett analysramverk beskriver och strukturerar information, medan en angreppsinstruktion talar om exakt hur någon ska genomföra ett angrepp. ATT&CK kan exempelvis hjälpa ett säkerhetsteam att förstå att en viss observation hör ihop med en teknik för autentiseringsuppgifter eller åtkomst, utan att teamet behöver använda informationen som en steg-för-steg-instruktion.
+Om ATT&CK används som en checklista finns också risken att analysen blir förenklad. Alla attacker följer inte samma ordning och en angripare behöver inte använda alla tekniker. Olika grupper kan dessutom använda helt olika metoder för att uppnå samma mål.
+Ur ett defensivt perspektiv är det därför viktigare att fråga vad angriparen försöker uppnå, vilket beteende som observerats och hur detta kan upptäckas eller förhindras.
+ATT&CK hjälper alltså säkerhetsteam att skapa struktur, jämföra observationer och förbättra sitt försvar. Det är inte tänkt att vara en manual för hur man genomför cyberangrepp.
+
+
+Uppgift 3
+Välj fem tactics från Enterprise Matrix och beskriv vad varje tactic betyder på en övergripande nivå.
+Svarsinstruktion: Använd egna ord. Undvik tekniska genomförandedetaljer.
+
+Jag har valt följande fem tactics:
+Initial Access – beskriver hur en angripare försöker få en första väg in i organisationens miljö.
+Execution – handlar om att angriparen försöker få någon form av aktivitet eller kod att köras i den angripna miljön.
+Persistence – beskriver hur angriparen försöker behålla sin åtkomst även efter exempelvis omstart eller andra förändringar.
+Credential Access – handlar om försök att komma över autentiseringsuppgifter eller annan information som kan ge ytterligare åtkomst.
+Exfiltration – beskriver när angriparen försöker föra information från organisationens miljö till en plats som angriparen kontrollerar.
+Dessa tactics beskriver alltså främst angriparens mål eller syfte, inte exakt hur aktiviteten genomförs.
+
+
+Uppgift 4
+Beskriv hur ATT&CK kan stödja kommunikationen mellan red team, blue team och ledning.
+Svarsinstruktion: Skriv 200-300 ord. Ta upp gemensamt språk, spårbarhet och prioritering.
+
+MITRE ATT&CK kan underlätta kommunikationen mellan red team, blue team och ledningen genom att ge alla parter ett gemensamt språk. Utan ett gemensamt ramverk kan samma händelse beskrivas på olika sätt av olika personer. ATT&CK gör det enklare att koppla observationer till tactics och techniques.
+För red team kan ATT&CK användas för att beskriva vilka typer av angriparbeteenden som ingår i en säkerhetstestning. Blue team kan sedan använda samma struktur för att undersöka vilka aktiviteter som kunde upptäckas, vilka loggar som fanns och vilka kontroller som fungerade.
+Spårbarhet är också viktigt. Om en observation kopplas till en specifik technique kan teamet dokumentera vilken källa som stöder mappningen och varför man anser att den är rimlig. Om analysen senare visar sig vara felaktig går det då att följa tillbaka till den ursprungliga bedömningen.
+För ledningen kan ATT&CK dessutom göra tekniska säkerhetsfrågor lättare att sammanfatta. Istället för att presentera många tekniska detaljer kan säkerhetsteamet visa vilka delar av en attackkedja som är väl skyddade och var det finns större luckor.
+På så sätt kan ATT&CK hjälpa organisationen att prioritera investeringar. Exempelvis kan återkommande oupptäckta tekniker leda till att bättre loggning, övervakning eller utbildning prioriteras.
+
+
+Del 2 - TTP: Tactic, Technique och Procedure
+Uppgift 5
+Förklara skillnaden mellan tactic, technique och procedure.
+Svarsinstruktion: Använd ett eget defensivt exempel. Håll dig på konceptuell nivå.
+
+actic, technique och procedure beskriver tre olika nivåer av angriparbeteende.
+En tactic beskriver angriparens övergripande mål. Ett exempel är Credential Access, där målet är att få tillgång till autentiseringsuppgifter.
+En technique beskriver vilken typ av metod angriparen använder för att försöka uppnå målet. Det kan exempelvis handla om att försöka hitta eller komma över lagrade autentiseringsuppgifter.
+En procedure beskriver hur en viss teknik har observerats i ett specifikt fall. Det är alltså den konkreta beskrivningen av beteendet i den aktuella situationen.
+Ett defensivt exempel kan därför beskrivas så här:
+Tactic: Credential Access
+ → Angriparen försöker få tillgång till autentiseringsuppgifter.
+Technique: En teknik för att hitta eller samla in autentiseringsuppgifter.
+ → Beskriver typen av aktivitet.
+Procedure: I den analyserade incidenten observerades beteende som tyder på att angriparen försökte komma åt information som kunde användas för autentisering.
+Skillnaden är alltså att tactic beskriver varför, technique beskriver vilken typ av metod, och procedure beskriver hur beteendet faktiskt observerades i ett specifikt sammanhang.
+
+
+Uppgift 6
+Skapa en TTP-förklaring för tre valfria ATT&CK-tekniker.
+Svarsinstruktion: För varje teknik: skriv tactic, technique och en kort procedure-beskrivning utan operativa instruktioner.
+
+Teknik 1 – Phishing
+Tactic: Initial Access
+Technique: Phishing
+Procedure: En angripare försöker få en användare att interagera med ett meddelande som är utformat för att ge angriparen en första väg in i organisationens miljö.
+Teknik 2 – Valid Accounts
+Tactic: Persistence / Privilege Escalation / Defense Evasion / Initial Access
+Technique: Valid Accounts
+Procedure: Observationer visar att autentiseringsuppgifter som verkar vara giltiga används på ett sätt som avviker från det förväntade beteendet.
+Teknik 3 – Data from Local System
+Tactic: Collection
+Technique: Data from Local System
+Procedure: Angriparen samlar information från det lokala systemet som senare kan vara relevant för angreppets mål.
+
+
+Uppgift 7
+Välj en tactic och identifiera tre tekniker som kan höra hemma inom den.
+Svarsinstruktion: Motivera varför teknikerna passar in i tacticen.
+
+Jag väljer Initial Access.
+Tre tekniker som kan höra hemma inom denna tactic är:
+Phishing
+Exploit Public-Facing Application
+Valid Accounts
+De passar eftersom alla kan representera olika sätt som en angripare kan få en första åtkomst till organisationens miljö.
+Phishing handlar om att försöka få en användare att interagera med något som kan ge angriparen åtkomst.
+Exploit Public-Facing Application handlar på en övergripande nivå om att utnyttja en exponerad applikation eller tjänst för att få åtkomst.
+Valid Accounts kan användas när angriparen har tillgång till giltiga kontouppgifter och använder dessa för att få åtkomst.
+Det viktiga är att tacticen beskriver målet – första åtkomst, medan teknikerna beskriver olika typer av vägar dit.
+
+
+Uppgift 8
+Beskriv varför det kan vara svårt att mappa en observation till rätt teknik.
+Svarsinstruktion: Ta upp osäkerhet, kontext, datakvalitet och behov av källor.
+
+Det kan vara svårt att mappa en observation till rätt ATT&CK-teknik eftersom samma beteende kan passa in på flera möjliga tekniker. En enskild observation innehåller inte alltid tillräckligt mycket information för att göra en säker bedömning.
+Osäkerhet är därför en viktig faktor. Säkerhetsteamet bör inte automatiskt anta att en observation bevisar en viss teknik.
+Även kontext spelar stor roll. En aktivitet som är normal för en administratör kan vara mycket mer misstänkt om den sker från ett ovanligt konto eller vid en ovanlig tidpunkt.
+Datakvaliteten påverkar också analysen. Om loggar saknas eller innehåller för lite information blir det svårare att avgöra vad som faktiskt har hänt.
+Därför behövs även källor. Teamet bör jämföra observationen med dokumentation, ATT&CK-beskrivningar och andra relevanta källor.
+En bra mappning bör därför innehålla både en motivering och en bedömning av osäkerheten. Det är bättre att ange att en mappning är osäker än att presentera en gissning som ett faktum.
+
+
+Del 3 - Bygg en defensiv attackkedja
+Uppgift 9
+Bygg en enkel attackkedja med 3-5 steg.
+Svarsinstruktion: Använd tactics som etiketter. Syftet är analys och försvar, inte teknisk genomförandeinstruktion.
+
+En förenklad attackkedja kan se ut så här:
+Initial Access → Execution → Persistence → Credential Access → Exfiltration
+Kedjan beskriver ett hypotetiskt scenario där en angripare först får tillgång till miljön, därefter försöker utföra aktiviteter, behålla åtkomst, komma över autentiseringsuppgifter och slutligen föra information ut ur miljön.
+Syftet är att analysera vilka försvar som finns vid varje steg.
+
+
+Uppgift 10
+Beskriv varje steg i er kedja med “varför”, “hur” och “vad såg vi?”.
+ITSX25 Kurs 6 · Individuell inlämningsuppgift Workshop 2
+Svarsinstruktion: Koppla till TTP-modellen: tactic, technique och procedure.
+
+
+Steg
+Varför?
+Hur?
+Vad såg vi?
+Initial Access
+Angriparen behöver en första väg in.
+Genom ett beteende som kan ge första åtkomst.
+En misstänkt första kontakt observerades.
+Execution
+Angriparen behöver få aktivitet att genomföras.
+Genom ett beteende som resulterar i exekvering.
+Oväntad aktivitet observerades på en klient.
+Persistence
+Angriparen vill behålla åtkomsten.
+Genom någon form av förändring som gör fortsatt åtkomst möjlig.
+En ovanlig förändring i miljön observerades.
+Credential Access
+Angriparen vill kunna använda ytterligare konton eller behörigheter.
+Genom beteende kopplat till åtkomst till autentiseringsinformation.
+Misstänkt aktivitet kopplad till autentiseringsuppgifter observerades.
+Exfiltration
+Angriparen vill få ut information.
+Genom aktivitet som innebär överföring eller åtkomst till data utanför miljön.
+Ovanlig dataöverföring observerades.
+
+
+
+Uppgift 11
+Identifiera vilka steg i attackkedjan som är mest osäkra.
+Svarsinstruktion: Beskriv vad ni behöver veta mer om för att göra analysen bättre.
+
+De mest osäkra stegen i attackkedjan är Initial Access och Credential Access.
+Vid Initial Access behöver vi veta mer om hur den första kontakten faktiskt gick till och om den verkligen ledde till åtkomst. Vi behöver exempelvis bättre tidslinje och mer information från relevanta loggar.
+Vid Credential Access behöver vi kunna avgöra om aktiviteten faktiskt var kopplad till försök att komma åt autentiseringsuppgifter eller om det fanns en legitim administrativ förklaring.
+För att förbättra analysen behöver vi därför:
+mer komplett loggdata,
+tydligare tidslinje,
+information om användare och system,
+bekräftelse från ytterligare källor,
+jämförelse med normalt beteende,
+och tydligare koppling mellan observation och ATT&CK-teknik.
+
+Uppgift 12
+Rita eller beskriv attackkedjan som en enkel kedja från första kontakt till påverkan.
+Svarsinstruktion: Använd pilar och korta rubriker. Om ni skriver digitalt kan ni använda tabell eller punktlista.
+
+Första kontakt
+ ↓
+ Initial Access
+ ↓
+ Execution
+ ↓
+ Persistence
+ ↓
+ Credential Access
+ ↓
+ Exfiltration
+ ↓
+ Påverkan på organisationen
+Kedjan visar hur olika delar av ett hypotetiskt angrepp kan analyseras ur ett defensivt perspektiv.
+
+Del 4 - Försvarsfrågor och Blue/Purple-perspektiv
+Uppgift 13
+Formulera minst en försvarsfråga per steg i attackkedjan.
+Svarsinstruktion: Exempel: Hur skulle detta kunna upptäckas? Vilken signal, rutin eller kontroll kan vara relevant?
+
+Initial Access
+Hur skulle den första misstänkta kontakten kunna upptäckas?
+Execution
+Vilka signaler skulle kunna visa att oväntad aktivitet har genomförts?
+Persistence
+Hur kan förändringar som ger långvarig åtkomst upptäckas?
+Credential Access
+Vilka tecken kan indikera misstänkt aktivitet kring autentiseringsuppgifter?
+Exfiltration
+Hur kan ovanliga dataöverföringar identifieras och undersökas?
+
+
+Uppgift 14
+Välj två tekniker och resonera kring möjliga detektionssignaler.
+Svarsinstruktion: Håll svaret på konceptuell nivå. Beskriv typer av signaler, inte tekniska exploit-steg.
+
+Jag väljer Phishing och Valid Accounts.
+För Phishing kan möjliga detektionssignaler vara ovanliga meddelanden, misstänkta länkar eller bilagor, användarrapporter och aktiviteter som avviker från normalt beteende.
+För Valid Accounts kan signaler vara inloggningar från ovanliga platser, ovanliga tider, användning av konton på system där de normalt inte används eller förändringar i ett kontos normala aktivitetsmönster.
+Det viktiga är att ingen enskild signal alltid behöver betyda att ett angrepp pågår. Flera signaler tillsammans kan ge bättre underlag för en säkerhetsanalys.
+
+
+ITSX25 Kurs 6 · Individuell inlämningsuppgift Workshop 2
+Uppgift 15
+Välj två tekniker och resonera kring möjliga riskreducerande åtgärder.
+Svarsinstruktion: Beskriv organisatoriska, tekniska eller processmässiga åtgärder.
+
+Jag väljer Phishing och Valid Accounts.
+För att minska risken från phishing kan organisationen använda:
+utbildning och regelbunden säkerhetsmedvetenhet,
+tydliga rutiner för rapportering av misstänkta meddelanden,
+tekniska kontroller för e-post,
+flerfaktorsautentisering,
+och begränsade användarbehörigheter.
+För att minska risken med Valid Accounts kan organisationen använda:
+stark autentisering,
+flerfaktorsautentisering,
+principen om minsta privilegium,
+regelbunden granskning av konton,
+snabb avstängning av gamla konton,
+och övervakning av ovanliga inloggningsmönster.
+Åtgärderna bör kombineras eftersom tekniska kontroller ensamma inte alltid räcker.
+
+
+Uppgift 16
+Beskriv hur ett säkerhetsteam kan använda en attackkedja för att förbättra sitt försvar.
+Svarsinstruktion: Skriv 200-300 ord. Ta upp lärande, prioritering och uppföljning.
+En attackkedja kan hjälpa ett säkerhetsteam att förbättra sitt försvar genom att visa hur olika aktiviteter hänger ihop. Istället för att bara analysera enskilda larm kan teamet undersöka hela förloppet och se var organisationen kunde ha upptäckt eller stoppat aktiviteten.
+Ett första steg är att använda attackkedjan för lärande. Teamet kan gå igenom varje tactic och diskutera vilka observationer som fanns, vilka som saknades och vilka antaganden som gjordes. Detta kan ge bättre förståelse för organisationens styrkor och svagheter.
+Attackkedjan kan sedan användas för prioritering. Om flera steg saknar bra loggning eller detektion kan dessa områden prioriteras framför mindre viktiga förbättringar. Det kan också hjälpa ledningen att förstå varför vissa säkerhetsinvesteringar behövs.
+Slutligen behövs uppföljning. Efter att en förbättring har genomförts bör teamet kontrollera om den faktiskt har gett bättre upptäckt eller minskat risken. Resultatet kan dokumenteras och jämföras med tidigare analyser.
+På detta sätt blir attackkedjan inte bara en beskrivning av ett angrepp. Den blir ett verktyg för kontinuerligt säkerhetsarbete där teamet kan identifiera luckor, genomföra förbättringar och sedan kontrollera resultatet.
+
+
+Del 5 - Källor, spårbarhet och kvalitet
+Uppgift 17
+Dokumentera vilka källor ni använder i er ATT&CK-analys.
+Svarsinstruktion: Skriv minst tre källor eller länkar. Beskriv kort vad varje källa bidrar med.
+
+Tre viktiga källor för ATT&CK-analysen är:
+MITRE ATT&CK – den huvudsakliga källan för tactics, techniques och deras beskrivningar. Den används för att kontrollera att vår TTP-mappning stämmer.
+MITRE ATT&CK Enterprise Matrix – används för att få en överblick över hur tactics och techniques är strukturerade inom Enterprise-delen av ATT&CK.
+MITRE ATT&CK Groups/Software – kan användas för att förstå hur olika tekniker har observerats i verkliga hotaktörs- eller programvarusammanhang.
+Källorna hjälper oss framför allt att göra analysen spårbar och minska risken för att vi själva hittar på eller misstolkar en TTP-mappning.
+
+
+Uppgift 18
+Beskriv hur ni säkerställer att er TTP-mappning är rimlig.
+Svarsinstruktion: Ta upp källa, motivering, osäkerhet och gruppgranskning.
+
+För att säkerställa att vår TTP-mappning är rimlig använder vi flera steg.
+Först kontrollerar vi källan och jämför observationen med relevant dokumentation från MITRE ATT&CK.
+Därefter skriver vi en kort motivering till varför observationen passar den valda tekniken. Vi försöker även identifiera alternativa tekniker som skulle kunna passa.
+Vi dokumenterar också osäkerhet. Om bevisen inte räcker för en säker mappning markerar vi detta istället för att presentera slutsatsen som säker.
+Slutligen gör vi en gruppgranskning, där någon annan i gruppen får kontrollera mappningen och ifrågasätta motiveringen. På så sätt minskar risken att en person ensam gör en felaktig tolkning.
+
+
+Uppgift 19
+Skapa en mini-Definition of Done för en färdig hotanalys.
+Svarsinstruktion: Lista minst fem kriterier. Kriterierna ska gå att använda av hela gruppen.
+
+En hotanalys är färdig när:
+Alla relevanta observationer är dokumenterade.
+Tactics och techniques är tydligt angivna.
+Varje TTP-mappning har en motivering.
+Källorna är dokumenterade.
+Osäkra eller oklara delar är markerade.
+Attackkedjan är begriplig för hela gruppen.
+Försvarsfrågor har identifierats.
+Minst en annan person i gruppen har granskat analysen.
+Slutsatser och rekommendationer går att spåra tillbaka till observationer.
+
+
+ITSX25 Kurs 6 · Individuell inlämningsuppgift Workshop 2
+Uppgift 20
+Beskriv vad som gör en hotanalys användbar för någon annan än den som skrev den.
+Svarsinstruktion: Skriv 150-250 ord. Fokusera på tydlighet, spårbarhet och mottagare.
+
+En hotanalys blir användbar för andra när den är tydlig, strukturerad och möjlig att följa tillbaka till sina källor. Den ska inte bara förklara vad gruppen tror har hänt utan även visa varför man kommit fram till den slutsatsen.
+Tydlighet innebär att använda ett gemensamt språk och undvika onödigt tekniska eller oklara formuleringar. En person som inte deltagit i analysen ska kunna förstå huvudresultatet.
+Spårbarhet innebär att observationer, TTP-mappningar och slutsatser kan kopplas till varandra. Det ska exempelvis gå att se vilken observation som ledde till en viss technique och vilken källa som stödjer mappningen.
+Även mottagaren är viktig. En tekniker kan behöva detaljer om loggar och detektioner, medan en chef främst behöver förstå risk, prioritering och vilka åtgärder som rekommenderas.
+En användbar hotanalys bör därför innehålla en tydlig sammanfattning, relevanta observationer, källor, osäkerheter och konkreta försvarsrekommendationer.
+På så sätt kan analysen användas av andra personer för att fatta beslut, fortsätta undersökningen eller förbättra organisationens säkerhetsarbete.
+
+
+Del 6 - Koppling till backlog, sprint och Workshop 3
+Uppgift 21
+Uppdatera er backlog baserat på det ni upptäckte i Workshop 2.
+Svarsinstruktion: Skriv minst fem nya eller ändrade backlog items. Ge kort motivering.
+
+
+Backlog item
+Prioritet
+Motivering
+Förbättra dokumentationen av TTP-mappningar
+Must Have
+Gör analysen mer spårbar.
+Identifiera saknade detektionssignaler
+Must Have
+Behövs för att förbättra försvaret.
+Kontrollera osäkra delar av attackkedjan
+Must Have
+Minskar risken för felaktiga slutsatser.
+Dokumentera använda källor
+Should Have
+Gör analysen lättare att granska.
+Granska attackkedjan tillsammans
+Should Have
+Ger bättre kvalitet genom gruppgranskning.
+Sammanställa rekommenderade säkerhetsåtgärder
+Should Have
+Gör analysen mer användbar för mottagaren.
+Fördjupa vissa ATT&CK-tekniker
+Could Have
+Kan göras om tid finns efter de viktigaste punkterna.
+
+
+
+Uppgift 22
+Beskriv hur er attackkedja förhåller sig till ert Sprint Goal.
+Svarsinstruktion: Är sprintmålet fortfarande relevant? Behöver något justeras?
+
+Vår attackkedja är fortfarande relevant för vårt Sprint Goal eftersom den hjälper oss att strukturera analysen och identifiera vilka delar av angreppet som behöver undersökas vidare.
+Workshop 2 har samtidigt visat att vissa delar är mer osäkra än vi först trodde. Därför behöver sprintmålet eventuellt justeras från att enbart fokusera på att beskriva attacken till att även säkerställa att våra observationer och TTP-mappningar är tillräckligt väl underbyggda.
+Det innebär att kvalitet och spårbarhet bör vara en tydligare del av det fortsatta arbete
+
+
+Uppgift 23
+Formulera minst två uppföljningsfrågor inför Workshop 3.
+Svarsinstruktion: Frågorna ska kunna användas vid review eller retrospektiv.
+
+Vilka delar av vår attackkedja behöver ytterligare bevis eller bättre källor innan vi kan betrakta analysen som färdig?
+Vilka av våra föreslagna försvarsåtgärder ger störst säkerhetsvärde och bör prioriteras först?
+Vilka delar av vårt arbetssätt fungerade bra och vilka delar behöver vi förändra inför nästa workshop?
+
+
+Uppgift 24
+Förbered en kort statusrapport till Workshop 3.
+Svarsinstruktion: Skriv 5-7 punkter: vad ni gjorde, vad som blev klart, vad som är oklart och vad ni vill ändra.
+
+Vi har byggt en förenklad attackkedja med fem steg och kopplat varje steg till relevanta tactics.
+Vi har identifierat möjliga techniques och beskrivit dem på en defensiv och konceptuell nivå.
+Vi har analyserat vilka delar av attackkedjan som är mest osäkra.
+Vi har identifierat möjliga detektionssignaler och riskreducerande åtgärder.
+Vi har börjat dokumentera källor och motiveringar för våra TTP-mappningar.
+Det som fortfarande är oklart är framför allt vissa observationers exakta koppling till rätt ATT&CK-teknik.
+Inför Workshop 3 vill vi förbättra spårbarheten, granska våra mappningar tillsammans och prioritera de viktigaste försvarsåtgärderna.
