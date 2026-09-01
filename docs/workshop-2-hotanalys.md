@@ -22,6 +22,8 @@ Vi valde scenariot eftersom det är realistiskt och visar hur en angripare kan m
 
 Vi har valt fem MITRE ATT&CK-tekniker som tillsammans bildar en sammanhängande attackkedja. Diagrammet visar hur angriparen går vidare från ett steg till nästa och vilket mål varje steg har.
 
+*Diagrammet läses uppifrån och ned. Blått visar Initial Access, lila visar Discovery och grönt visar Collection.*
+
 ```mermaid
 flowchart TB
     A["<b>STEG 1 · INITIAL ACCESS</b><br/><br/><b>Spearphishing Link</b> · T1566.002<br/>Falsk länk samlar in användarens uppgifter"]
@@ -43,8 +45,6 @@ flowchart TB
     class D,E collection;
     linkStyle default stroke:#64748b,stroke-width:2px;
 ```
-
-*Diagrammet läses uppifrån och ned. Blått visar Initial Access, lila visar Discovery och grönt visar Collection.*
 
 Kedjan kan sammanfattas så här:
 
