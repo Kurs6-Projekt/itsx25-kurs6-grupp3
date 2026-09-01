@@ -1,0 +1,268 @@
+Övning 1
+Vad skiljer ett cybersäkerhetsteam från en vanlig utvecklingsgrupp?
+Svarsinstruktion: Skriv 150-300 ord. Ge gärna exempel på ansvar, arbetsflöden och typer av leverabler.
+What distinguishes a cybersecurity team from a regular development team?
+Response instructions: Write 150-300 words. Please provide examples of responsibilities, workflows, and types of deliverables.
+
+Ett cybersäkerhetsteam skiljer sig från en vanlig utvecklingsgrupp främst genom sitt fokus på att identifiera, förebygga och hantera säkerhetsrisker. En utvecklingsgrupp arbetar vanligtvis med att bygga och förbättra funktioner, medan cybersäkerhetsteamet säkerställer att systemen är skyddade mot exempelvis intrång, dataläckor och sårbarheter.
+
+Cybersäkerhetsteamets ansvar kan vara övervakning av loggar och nätverk, sårbarhetsskanning, incidenthantering, riskanalyser och säkerhetsgranskningar av kod och infrastruktur. Arbetsflödet kan exempelvis innebära att teamet upptäcker en misstänkt aktivitet, analyserar händelsen, begränsar hotet och sedan dokumenterar och åtgärdar orsaken.
+
+En utvecklingsgrupp arbetar oftare i sprintar med krav, utveckling, testning och release av nya funktioner. Deras leverabler kan vara applikationer, nya funktioner och kod. Cybersäkerhetsteamets leverabler kan istället vara säkerhetsrapporter, incidentrapporter, sårbarhetsanalyser, säkerhetskrav, övervakningsregler och rekommendationer för säkerhetsförbättringar. Teamsamarbete mellan grupperna är viktigt för att säkerhet ska byggas in redan från början.
+
+
+Övning 2
+Vilka tre utmaningar tror du att ett säkerhetsteam möter i vardagen?
+Svarsinstruktion: Motivera dina svar. Beskriv också varför utmaningarna påverkar teamets sätt att planera arbete.
+
+Ett säkerhetsteam möter många olika utmaningar i vardagen, men tre av de viktigaste är att hantera ständigt förändrade hot, prioritera arbetsuppgifter och hantera begränsade resurser.
+1. Ständigt förändrade hot och attacker Cyberhot utvecklas hela tiden och nya sårbarheter upptäcks regelbundet. Säkerhetsteamet måste därför kontinuerligt bevaka hotbilden, analysera nya angreppssätt och uppdatera sina skyddsåtgärder. Detta påverkar planeringen eftersom teamet behöver avsätta tid för omvärldsbevakning och snabbt kunna ändra prioriteringar när nya hot uppstår.
+2. Prioritering av incidenter och arbetsuppgifter Alla säkerhetslarm är inte lika allvarliga. Teamet måste avgöra vilka incidenter som kräver omedelbar åtgärd och vilka som kan hanteras senare. En felaktig prioritering kan leda till att en allvarlig attack missas eller att tid läggs på mindre viktiga problem. Därför planeras arbetet utifrån risk och påverkan på verksamheten.
+3. Begränsade resurser och tid Många säkerhetsteam har begränsad personal och budget samtidigt som antalet säkerhetsuppgifter är stort. De måste därför välja vilka förbättringar, kontroller och projekt som ger störst nytta. Detta gör att planeringen behöver fokusera på de mest kritiska riskerna och skapa en balans mellan förebyggande arbete och akuta incidenter.
+Sammanfattningsvis påverkar dessa utmaningar säkerhetsteamets planering genom att arbetet måste vara flexibelt, riskbaserat och anpassat efter både aktuella hot och tillgängliga resurser.
+
+
+Övning 3
+Vilka kompetenser behöver finnas i ett säkerhetsteam?
+Svarsinstruktion: Beskriv minst fem roller eller förmågor och förklara kort varför de behövs.
+
+Ett säkerhetsteam behöver flera olika kompetenser eftersom cybersäkerhet består av många olika områden. Några viktiga roller och förmågor är:
+Incidenthantering – Behövs för att snabbt kunna upptäcka, undersöka och hantera säkerhetsincidenter och minska skadan.
+Hotanalys (Threat Intelligence) – Hjälper teamet att förstå vilka hot och angripare som är aktuella och vilka metoder de använder.
+Nätverkssäkerhet – Behövs för att skydda nätverk och upptäcka misstänkt trafik eller obehörig åtkomst.
+System- och molnsäkerhet – Viktigt för att kunna säkra servrar, datorer, applikationer och molntjänster mot sårbarheter och felkonfigurationer.
+Riskhantering – Behövs för att bedöma vilka säkerhetsrisker som är viktigast och avgöra vilka åtgärder som ska prioriteras.
+Kommunikation och dokumentation – Säkerhetsteamet måste kunna dokumentera incidenter och förklara risker och åtgärder för både teknisk personal och ledning.
+Tillsammans gör dessa kompetenser att teamet kan förebygga, upptäcka, analysera och hantera säkerhetshot på ett strukturerat sätt.
+
+
+Del 2 - Teamarbete
+Övning 4
+Formulera tre regler som du tycker bör finnas i er Team Charter.
+Svarsinstruktion: Motivera varje regel. Koppla gärna till samarbete, ansvar, dokumentation eller kvalitet.
+
+1. Vi kommunicerar tydligt och respekterar varandras åsikter.
+Alla i teamet ska få möjlighet att komma med idéer och synpunkter. Detta skapar bättre samarbete och minskar risken för missförstånd.
+
+2. Vi tar ansvar för våra uppgifter och meddelar om något inte fungerar.
+Varje person ska ta ansvar för det arbete som tilldelats. Om man får problem eller inte hinner klart ska man säga till i tid, så att teamet kan hjälpa till och planera om arbetet.
+
+3. Vi dokumenterar vårt arbete och kontrollerar kvaliteten innan vi avslutar en uppgift.
+Dokumentation gör det lättare för andra i teamet att förstå vad som har gjorts och fortsätta arbetet. Genom att kontrollera resultatet minskar vi också risken för fel och missar.
+
+Övning 5
+Beskriv hur ni vill kommunicera inom gruppen.
+Svarsinstruktion: Beskriv när ni använder Teams, e-post, möten och dokumentation.
+
+Vi vill använda olika kommunikationskanaler beroende på vad informationen gäller.
+Teams använder vi för snabb kommunikation, frågor och kortare uppdateringar inom gruppen. Det passar bra när något behöver diskuteras snabbt.
+E-post använder vi för viktigare information som behöver vara tydligt formulerad och lätt att hitta senare, till exempel information från lärare eller andra personer utanför gruppen.
+Möten använder vi när vi behöver diskutera större frågor, planera arbetet eller fatta gemensamma beslut. Efter möten sammanfattar vi viktiga beslut och vem som ansvarar för olika uppgifter.
+Dokumentation använder vi för att samla viktig information, resultat och beslut på ett gemensamt ställe. Det gör att alla i gruppen kan följa arbetet och förstå vad som har gjorts.
+På så sätt försöker vi hålla kommunikationen tydlig, strukturerad och tillgänglig för hela gruppen.
+
+
+Övning 6
+Hur bör en grupp agera om någon medlem inte hinner med sina uppgifter?
+Svarsinstruktion: Beskriv ett arbetssätt som är tydligt, respektfullt och möjligt att följa upp.
+
+Om någon i gruppen inte hinner med sina uppgifter bör personen först informera gruppen så tidigt som möjligt. Gruppen ska sedan tillsammans diskutera problemet utan att skuldbelägga personen.
+Vi kan använda följande arbetssätt:
+Meddela gruppen – Personen berättar att uppgiften inte kommer att bli klar i tid och förklarar kort varför.
+Bedöma situationen – Gruppen avgör hur viktig uppgiften är och om tidsplanen behöver ändras.
+Fördela om arbetet vid behov – Om det behövs kan någon annan hjälpa till eller ta över delar av uppgiften.
+Bestäm en ny deadline – Gruppen kommer överens om en realistisk tid när uppgiften ska vara klar.
+Följa upp – Vid nästa möte kontrollerar gruppen att uppgiften är klar och att arbetet kan fortsätta enligt planen.
+På detta sätt blir arbetssättet respektfullt eftersom fokus ligger på att lösa problemet, samtidigt som det finns tydligt ansvar och möjlighet att följa upp arbetet.
+
+
+Del 3 - Product Backlog
+Övning 7
+Skapa fem backlog items kopplade till Threat Intelligence.
+Svarsinstruktion: Varje backlog item ska ha titel och kort beskrivning.
+
+Samla in Threat Intelligence
+Identifiera och samla information om aktuella hot, attacker, sårbarheter och angripargrupper från relevanta källor.
+Analysera IoC:er
+Analysera Indicators of Compromise (IoC), exempelvis IP-adresser, domäner, hashvärden och filnamn, för att upptäcka potentiella hot.
+Bedöma hotbilden
+Utvärdera vilka hot som är mest relevanta för organisationen och prioritera dem utifrån sannolikhet och potentiell påverkan.
+Integrera Threat Intelligence i SIEM
+Koppla relevanta Threat Intelligence-källor till SIEM-systemet för att automatiskt jämföra loggdata med kända hotindikatorer.
+Skapa Threat Intelligence-rapporter
+Dokumentera aktuella hot, trender och rekommenderade åtgärder så att säkerhetsteamet kan fatta informerade beslut.
+
+
+Övning 8
+Skapa fem backlog items kopplade till MITRE ATT&CK.
+Svarsinstruktion: Tänk på vad ni behöver förstå, undersöka, dokumentera eller presentera.
+
+Kartlägg MITRE ATT&CK-tekniker
+Identifiera relevanta taktiker och tekniker i MITRE ATT&CK som kan kopplas till organisationens hotbild och säkerhetsarbete.
+Undersök aktuella hotaktörer
+Analysera utvalda threat actors i MITRE ATT&CK och dokumentera vilka tekniker, verktyg och attackmetoder de är kända för att använda.
+Koppla säkerhetskontroller till ATT&CK
+Undersök hur befintliga säkerhetskontroller, exempelvis SIEM-regler, EDR och brandväggar, kan upptäcka eller förhindra identifierade ATT&CK-tekniker.
+Identifiera luckor i detektering
+Genomför en gap-analys för att hitta MITRE ATT&CK-tekniker som organisationen saknar tillräcklig övervakning eller detektering för.
+Presentera ATT&CK-mappning
+Dokumentera och presentera resultatet i en översikt som visar relevanta taktiker, tekniker, detekteringar och identifierade säkerhetsluckor.
+
+Övning 9
+Skapa fem backlog items kopplade till rapportering.
+Svarsinstruktion: Fokusera på vad en mottagare behöver förstå av ert arbete.
+
+Sammanställa resultat och slutsatser
+Beskriv de viktigaste resultaten från arbetet och förklara vad de innebär för mottagaren.
+Tydliggöra säkerhetsrisker och konsekvenser
+Rapportera identifierade risker, deras potentiella påverkan och varför de är relevanta att känna till.
+Dokumentera genomförda aktiviteter
+Redovisa vilka analyser, undersökningar och säkerhetsåtgärder som genomförts samt vad de har bidragit med.
+Presentera rekommenderade åtgärder
+Sammanfatta konkreta förbättringsförslag och förklara vilka problem de löser och vilken prioritet de bör ha.
+Anpassa rapporteringen till mottagaren
+Skapa en tydlig rapportstruktur där tekniska detaljer, resultat och slutsatser presenteras på en nivå som gör informationen begriplig och användbar för mottagaren.
+
+Övning 10
+Välj tre backlog items och skriv titel, beskrivning och förväntat resultat.
+Svarsinstruktion: Formulera dem så att någon annan i gruppen skulle kunna förstå vad som ska göras.
+
+1. Tydlig rapportering av säkerhetsläget
+Beskrivning: Ta fram en rapport som sammanfattar det aktuella säkerhetsläget, viktiga observationer och eventuella identifierade hot. Informationen ska presenteras på ett sätt som är lätt att förstå för en mottagare utan djup teknisk kunskap.
+Förväntat resultat: En tydlig och strukturerad rapport som ger mottagaren en snabb bild av säkerhetsläget, de viktigaste fynden och vad som behöver uppmärksammas.
+2. Sammanställning av MITRE ATT&CK-fynd
+Beskrivning: Kartlägg relevanta observationer och säkerhetshändelser mot MITRE ATT&CK-tekniker. Dokumentera vilka tekniker som har identifierats och vad de innebär för verksamheten.
+Förväntat resultat: En sammanställning där mottagaren kan se vilka ATT&CK-tekniker som är relevanta, varför de är viktiga och vilka säkerhetsrisker de kan innebära.
+3. Rapportering av Threat Intelligence
+Beskrivning: Sammanställ relevant Threat Intelligence och identifiera information som kan påverka organisationens säkerhet. Fokusera på att beskriva hot, aktörer, indikatorer och möjliga konsekvenser.
+Förväntat resultat: Ett lättförståeligt underlag som hjälper mottagaren att förstå vilka hot som är relevanta, hur de kan påverka organisationen och vilka åtgärder som bör övervägas.
+
+
+
+Del 4 - Prioritering
+Övning 11
+Prioritera era backlog items enligt Must Have, Should Have och Could Have.
+Svarsinstruktion: Motivera minst tre av era prioriteringar.
+
+Must Have
+Undersöka relevanta MITRE ATT&CK-tekniker.
+Samla in och analysera Threat Intelligence.
+Dokumentera resultaten på ett tydligt och strukturerat sätt.
+Kontrollera och kvalitetssäkra källorna.
+Should Have
+Jämföra olika hotaktörer och deras tekniker.
+Ta fram visualiseringar eller tabeller över resultaten.
+Göra en mer detaljerad analys av specifika attacker.
+Could Have
+Skapa extra diagram och illustrationer.
+Undersöka ytterligare hotaktörer som inte är centrala för projektet.
+Göra en mer omfattande presentation med extra material.
+Motivering
+En viktig prioritering är att undersöka relevanta MITRE ATT&CK-tekniker som Must Have eftersom detta är en central del av projektet och behövs för att kunna göra en korrekt analys.
+Threat Intelligence prioriteras också som Must Have eftersom informationen som samlas in är grunden för resten av arbetet. Om vi inte har tillförlitliga data blir även analysen och rapporteringen osäker.
+Kvalitetssäkring och dokumentation är också Must Have eftersom projektets resultat måste kunna förstås, granskas och följas upp av andra. Extra visualiseringar och fördjupningar kan däremot vänta eftersom de inte är nödvändiga för att uppnå projektets grundläggande mål.
+
+
+
+Övning 12
+Vilka tre aktiviteter anser du ger högst värde för projektet?
+Svarsinstruktion: Förklara varför dessa aktiviteter bör prioriteras tidigt.
+
+De tre aktiviteter som ger högst värde är:
+Samla in relevant Threat Intelligence.
+Detta bör göras tidigt eftersom analysen är beroende av att vi har relevant och tillförlitlig information.
+Kartlägga informationen mot MITRE ATT&CK.
+Genom att koppla observationer och attacker till specifika tekniker får vi ett gemensamt språk och kan förstå hur olika angrepp fungerar.
+Dokumentera och analysera resultaten.
+Dokumentationen gör att gruppen kan se vad vi har kommit fram till, upptäcka eventuella luckor och använda resultatet i den slutliga rapporteringen.
+Dessa aktiviteter bör prioriteras tidigt eftersom de skapar grunden för resten av projektet.
+
+
+Övning 13
+Vilka aktiviteter skulle kunna vänta till senare?
+Svarsinstruktion: Motivera varför dessa kan vänta utan att projektet tappar riktning.
+
+Aktiviteter som kan vänta är framför allt extra visualiseringar, fördjupade analyser av mindre relevanta hotaktörer och detaljer i presentationens design.
+Dessa aktiviteter är värdefulla men påverkar inte projektets grundläggande riktning. Först behöver gruppen säkerställa att den viktigaste informationen är insamlad, analyserad och dokumenterad. När detta är klart kan vi lägga tid på att förbättra presentationen och göra resultatet tydligare. På så sätt riskerar vi inte att lägga mycket tid på detaljer innan vi vet att det viktigaste arbetet är färdigt.
+
+
+Del 5 - Sprint Goal
+Övning 14
+Formulera ett första Sprint Goal för gruppen.
+Svarsinstruktion: Skriv max två meningar. Målet ska beskriva varför sprinten är värdefull.
+
+Målet med sprinten är att samla in och strukturera relevant Threat Intelligence samt koppla den till relevanta MITRE ATT&CK-tekniker. När sprinten är klar ska gruppen ha ett tydligt underlag som kan användas för den fortsatta analysen. 
+
+Övning 15
+Beskriv hur ni ska veta att Sprint Goal är uppnått.
+Svarsinstruktion: Skriv cirka 150 ord. Beskriv vilka tecken eller leverabler som visar att målet är uppnått.
+
+Sprintmålet är uppnått när gruppen har samlat in tillräckligt med relevant Threat Intelligence och strukturerat informationen på ett sätt som alla i gruppen kan förstå och använda. Det ska finnas dokumenterade källor så att informationen går att kontrollera och följa tillbaka till sin ursprungliga källa. De viktigaste observationerna ska dessutom vara kopplade till relevanta tekniker eller taktiker i MITRE ATT&CK.
+Ett tydligt tecken på att målet är uppnått är att gruppen kan visa en sammanställd lista eller tabell över de identifierade hoten, teknikerna och källorna. Informationen ska vara granskad av minst en annan gruppmedlem så att uppenbara fel eller missförstånd har upptäckts. Alla i gruppen ska också kunna förklara vad materialet visar och hur det kan användas i nästa steg av projektet. Då har sprinten skapat ett användbart underlag istället för bara osorterad information.
+
+
+Övning 16
+Vilka risker kan göra att sprintmålet inte uppnås?
+Svarsinstruktion: Beskriv minst tre risker och föreslå hur gruppen kan minska dem.
+
+Risk 1: Dåliga eller opålitliga källor
+Om gruppen använder information från osäkra källor kan analysen bli felaktig.
+Åtgärd: Använd flera trovärdiga källor och kontrollera viktig information innan den används.
+Risk 2: Otydlig arbetsfördelning
+Om flera personer gör samma sak medan andra delar inte blir gjorda kan sprinten försenas.
+Åtgärd: Dela upp arbetet tydligt och bestäm vem som ansvarar för varje backlog item.
+Risk 3: För stort fokus på detaljer
+Gruppen kan lägga för mycket tid på exempelvis design eller oviktiga detaljer.
+Åtgärd: Prioritera Must Have-uppgifterna och kontrollera regelbundet att arbetet fortfarande leder mot Sprint Goal.
+Risk 4: Bristande kommunikation
+Om gruppmedlemmarna inte delar sina resultat kan viktig information missas.
+Åtgärd: Ha korta avstämningar och dokumentera resultat löpande.
+
+
+Del 6 - Definition of Done
+Övning 17
+Lista minst fem kriterier som måste vara uppfyllda innan en uppgift räknas som klar.
+Svarsinstruktion: Kriterierna ska gå att använda av hela gruppen.
+
+En uppgift räknas som klar när:
+Uppgiften är helt genomförd enligt beskrivningen.
+Resultatet är dokumenterat på ett tydligt sätt.
+Relevanta källor är angivna och går att kontrollera.
+En annan gruppmedlem har granskat resultatet.
+Eventuella fel har korrigerats.
+Resultatet är sparat på rätt plats så att hela gruppen kan komma åt det.
+Resultatet kan användas i nästa steg av projektet utan att behöva göras om.
+
+
+Övning 18
+Ge exempel på en uppgift som ser klar ut men egentligen inte är det.
+Svarsinstruktion: Motivera med hjälp av dokumentation, granskning, kvalitet eller spårbarhet.
+
+Ett exempel är att en gruppmedlem har gjort en tabell över MITRE ATT&CK-tekniker och skrivit att uppgiften är klar. Vid närmare kontroll saknas dock källor och det framgår inte varför de olika teknikerna har valts.
+Uppgiften ser färdig ut eftersom tabellen finns, men den uppfyller inte Definition of Done. Informationen måste kunna granskas och följas tillbaka till sina källor. Dessutom bör en annan gruppmedlem kontrollera att teknikerna verkligen stämmer med den information som analyserats. Därför behöver uppgiften kompletteras med källhänvisningar och granskas innan den kan räknas som klar.
+
+
+Del 7 - Förberedelse inför MITRE ATT&CK
+Övning 19
+Vilka frågor hoppas du få svar på under MITRE ATT&CK-workshopen?
+Svarsinstruktion: Skriv minst fem frågor. Försök formulera frågor som hjälper er i projektarbetet.
+
+Hur väljer man rätt MITRE ATT&CK-teknik utifrån den information man har hittat?
+Hur skiljer man mellan olika tekniker och sub-tekniker?
+Hur kan MITRE ATT&CK användas tillsammans med Threat Intelligence?
+Hur kan vi använda MITRE ATT&CK för att analysera en specifik hotaktör?
+Hur avgör man vilka tekniker som är viktigast att prioritera?
+Hur kan ATT&CK användas för att identifiera luckor i ett säkerhetsförsvar?
+Hur bör vi dokumentera våra kopplingar mellan källor och ATT&CK-tekniker?
+Hur kan resultaten från ATT&CK användas i vår slutliga rapport?
+
+
+Övning 20
+Vad tror du att MITRE ATT&CK kan användas till i ett säkerhetsteam?
+Svarsinstruktion: Skriv 200-300 ord. Fokusera på analys, språk, prioritering och försvarsperspektiv.
+
+MITRE ATT&CK kan användas som ett gemensamt ramverk för att förstå, beskriva och analysera hur angripare arbetar. Genom att använda samma begrepp och kategorier kan ett säkerhetsteam enklare kommunicera om olika typer av attacker och tekniker.
+I analysarbete kan ATT&CK hjälpa teamet att koppla ihop observationer från exempelvis loggar, incidenter och Threat Intelligence med specifika tekniker som används av angripare. Det gör det lättare att förstå en attackkedja och se vilka metoder en hotaktör använder.
+ATT&CK kan också användas för prioritering. Om ett team upptäcker att en viss teknik används ofta av relevanta hotaktörer kan den prioriteras när nya säkerhetsåtgärder ska införas. På samma sätt kan teamet identifiera tekniker som organisationen har dålig upptäckt eller dåligt skydd mot.
+Ur ett försvarsperspektiv kan ATT&CK därför användas för att hitta luckor i säkerheten. Teamet kan undersöka vilka tekniker som kan upptäckas, vilka som saknar detektioner och vilka säkerhetskontroller som behöver förbättras. ATT&CK blir då inte bara ett sätt att beskriva attacker utan också ett verktyg för att planera och förbättra organisationens försvar.
+Sammanfattningsvis ger MITRE ATT&CK säkerhetsteamet ett gemensamt språk för analys, hjälper till att prioritera risker och gör det lättare att koppla Threat Intelligence till konkreta försvars- och detektionsåtgärder.
