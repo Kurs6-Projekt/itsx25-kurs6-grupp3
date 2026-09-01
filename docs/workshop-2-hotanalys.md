@@ -23,27 +23,43 @@ Vi valde scenariot eftersom det är realistiskt och visar hur en angripare kan m
 Vi har valt fem MITRE ATT&CK-tekniker som tillsammans bildar en sammanhängande attackkedja. Diagrammet visar hur angriparen går vidare från ett steg till nästa och vilket mål varje steg har.
 
 ```mermaid
-flowchart TD
-    A["1. Initial Access<br/><b>T1566.002</b><br/>Spearphishing Link<br/><i>Mål: stjäla inloggningsuppgifter</i>"]
-    B["2. Initial Access<br/><b>T1078.004</b><br/>Valid Accounts: Cloud Accounts<br/><i>Mål: komma in i Microsoft 365</i>"]
-    C["3. Discovery<br/><b>T1087.004</b><br/>Account Discovery: Cloud Account<br/><i>Mål: kartlägga användare och konton</i>"]
-    D["4. Collection<br/><b>T1213.002</b><br/>Data from Information Repositories: SharePoint<br/><i>Mål: hitta värdefull information</i>"]
-    E["5. Collection<br/><b>T1114.003</b><br/>Email Collection: Email Forwarding Rule<br/><i>Mål: samla in framtida mejl</i>"]
+flowchart LR
+    subgraph IA["INITIAL ACCESS"]
+        direction TB
+        A["<b>1 · Spearphishing Link</b><br/>T1566.002<br/><i>Mål: stjäla inloggningsuppgifter</i>"]
+        B["<b>2 · Valid Accounts</b><br/>Cloud Accounts · T1078.004<br/><i>Mål: komma in i Microsoft 365</i>"]
+    end
+
+    subgraph DI["DISCOVERY"]
+        direction TB
+        C["<b>3 · Account Discovery</b><br/>Cloud Account · T1087.004<br/><i>Mål: kartlägga användare och konton</i>"]
+    end
+
+    subgraph CO["COLLECTION"]
+        direction TB
+        D["<b>4 · SharePoint</b><br/>T1213.002<br/><i>Mål: hitta värdefull information</i>"]
+        E["<b>5 · Email Forwarding Rule</b><br/>T1114.003<br/><i>Mål: samla in framtida mejl</i>"]
+    end
 
     A -->|Stulna uppgifter| B
-    B -->|Åtkomst till kontot| C
-    C -->|Intressanta användare hittas| D
-    D -->|Fortsatt informationsinsamling| E
+    B -->|Kapat konto| C
+    C -->|Kartlagda resurser| D
+    D -->|Fortsatt insyn| E
 
-    classDef initial fill:#e8f1ff,stroke:#2563eb,color:#111827,stroke-width:2px;
-    classDef discovery fill:#f3e8ff,stroke:#7c3aed,color:#111827,stroke-width:2px;
-    classDef collection fill:#dcfce7,stroke:#16a34a,color:#111827,stroke-width:2px;
+    classDef initial fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:2px;
+    classDef discovery fill:#ede9fe,stroke:#7c3aed,color:#0f172a,stroke-width:2px;
+    classDef collection fill:#dcfce7,stroke:#16a34a,color:#0f172a,stroke-width:2px;
     class A,B initial;
     class C discovery;
     class D,E collection;
+
+    style IA fill:#eff6ff,stroke:#60a5fa,stroke-width:2px,color:#1e3a8a;
+    style DI fill:#f5f3ff,stroke:#a78bfa,stroke-width:2px,color:#4c1d95;
+    style CO fill:#f0fdf4,stroke:#4ade80,stroke-width:2px,color:#14532d;
+    linkStyle default stroke:#64748b,stroke-width:2px;
 ```
 
-**Färgförklaring:** Blå = Initial Access, lila = Discovery och grön = Collection.
+*Diagrammet läses från vänster till höger. Kolumnerna motsvarar MITRE ATT&CK-taktiker och rutorna visar teknikerna i den ordning de används.*
 
 Kedjan kan sammanfattas så här:
 
