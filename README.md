@@ -8,3 +8,4 @@ Projektarbete för Grupp 3.
 - [Product Backlog – Workshop 1](docs/product-backlog.md)
 - [Sprint Goal och Definition of Done](docs/sprint-goal-and-dod.md)
 - [Workshop 2 – MITRE ATT&CK och hotanalys](docs/workshop-2-hotanalys.md)
+- [Workshop 3 – Retrospektiv](docs/workshop-3-retrospektiv.md)
