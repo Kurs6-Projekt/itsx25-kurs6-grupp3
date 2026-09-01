@@ -23,28 +23,17 @@ Vi valde scenariot eftersom det är realistiskt och visar hur en angripare kan m
 Vi har valt fem MITRE ATT&CK-tekniker som tillsammans bildar en sammanhängande attackkedja. Diagrammet visar hur angriparen går vidare från ett steg till nästa och vilket mål varje steg har.
 
 ```mermaid
-flowchart LR
-    subgraph IA["INITIAL ACCESS"]
-        direction TB
-        A["<b>1 · Spearphishing Link</b><br/>T1566.002<br/><i>Mål: stjäla inloggningsuppgifter</i>"]
-        B["<b>2 · Valid Accounts</b><br/>Cloud Accounts · T1078.004<br/><i>Mål: komma in i Microsoft 365</i>"]
-    end
+flowchart TB
+    A["<b>STEG 1 · INITIAL ACCESS</b><br/><br/><b>Spearphishing Link</b> · T1566.002<br/>Falsk länk samlar in användarens uppgifter"]
+    B["<b>STEG 2 · INITIAL ACCESS</b><br/><br/><b>Valid Accounts: Cloud Accounts</b> · T1078.004<br/>Det stulna kontot används för att logga in"]
+    C["<b>STEG 3 · DISCOVERY</b><br/><br/><b>Account Discovery: Cloud Account</b> · T1087.004<br/>Användare och intressanta konton kartläggs"]
+    D["<b>STEG 4 · COLLECTION</b><br/><br/><b>SharePoint</b> · T1213.002<br/>Dokument och annan värdefull information söks fram"]
+    E["<b>STEG 5 · COLLECTION</b><br/><br/><b>Email Forwarding Rule</b> · T1114.003<br/>Framtida mejl skickas vidare till angriparen"]
 
-    subgraph DI["DISCOVERY"]
-        direction TB
-        C["<b>3 · Account Discovery</b><br/>Cloud Account · T1087.004<br/><i>Mål: kartlägga användare och konton</i>"]
-    end
-
-    subgraph CO["COLLECTION"]
-        direction TB
-        D["<b>4 · SharePoint</b><br/>T1213.002<br/><i>Mål: hitta värdefull information</i>"]
-        E["<b>5 · Email Forwarding Rule</b><br/>T1114.003<br/><i>Mål: samla in framtida mejl</i>"]
-    end
-
-    A -->|Stulna uppgifter| B
-    B -->|Kapat konto| C
-    C -->|Kartlagda resurser| D
-    D -->|Fortsatt insyn| E
+    A ==>|Stulna uppgifter| B
+    B ==>|Kapat molnkonto| C
+    C ==>|Intressanta resurser| D
+    D ==>|Fortsatt insyn| E
 
     classDef initial fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:2px;
     classDef discovery fill:#ede9fe,stroke:#7c3aed,color:#0f172a,stroke-width:2px;
@@ -52,14 +41,10 @@ flowchart LR
     class A,B initial;
     class C discovery;
     class D,E collection;
-
-    style IA fill:#eff6ff,stroke:#60a5fa,stroke-width:2px,color:#1e3a8a;
-    style DI fill:#f5f3ff,stroke:#a78bfa,stroke-width:2px,color:#4c1d95;
-    style CO fill:#f0fdf4,stroke:#4ade80,stroke-width:2px,color:#14532d;
     linkStyle default stroke:#64748b,stroke-width:2px;
 ```
 
-*Diagrammet läses från vänster till höger. Kolumnerna motsvarar MITRE ATT&CK-taktiker och rutorna visar teknikerna i den ordning de används.*
+*Diagrammet läses uppifrån och ned. Blått visar Initial Access, lila visar Discovery och grönt visar Collection.*
 
 Kedjan kan sammanfattas så här:
 
