@@ -1,8 +1,8 @@
 # Workshop 3 – Retrospektiv
 
-**Grupp:** Grupp 3  
-**Datum:**  
-**Deltagare:**
+- **Grupp:** Grupp 3
+- **Datum:** 1 september 2026
+- **Deltagare:** Andre Edvardsson, Viktor Westerlund, Jonathan Tsubarah, Erik Aldualif, Marcus Gustafsson och Carl Persson
 
 Retrospektivet handlar om hur gruppens arbete fungerade under sprinten och vad vi vill förbättra till nästa sprint.
 
