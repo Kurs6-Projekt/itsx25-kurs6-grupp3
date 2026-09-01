@@ -20,29 +20,30 @@ Vi valde scenariot eftersom det är realistiskt och visar hur en angripare kan m
 
 ## 2. Attackkedja
 
-Vi har valt fem MITRE ATT&CK-tekniker som tillsammans bildar en sammanhängande attackkedja:
+Vi har valt fem MITRE ATT&CK-tekniker som tillsammans bildar en sammanhängande attackkedja. Diagrammet visar hur angriparen går vidare från ett steg till nästa och vilket mål varje steg har.
 
-```text
-Initial Access
-Spearphishing Link
-T1566.002
-        ↓
-Initial Access
-Valid Accounts: Cloud Accounts
-T1078.004
-        ↓
-Discovery
-Account Discovery: Cloud Account
-T1087.004
-        ↓
-Collection
-Data from Information Repositories: SharePoint
-T1213.002
-        ↓
-Collection
-Email Collection: Email Forwarding Rule
-T1114.003
+```mermaid
+flowchart TD
+    A["1. Initial Access<br/><b>T1566.002</b><br/>Spearphishing Link<br/><i>Mål: stjäla inloggningsuppgifter</i>"]
+    B["2. Initial Access<br/><b>T1078.004</b><br/>Valid Accounts: Cloud Accounts<br/><i>Mål: komma in i Microsoft 365</i>"]
+    C["3. Discovery<br/><b>T1087.004</b><br/>Account Discovery: Cloud Account<br/><i>Mål: kartlägga användare och konton</i>"]
+    D["4. Collection<br/><b>T1213.002</b><br/>Data from Information Repositories: SharePoint<br/><i>Mål: hitta värdefull information</i>"]
+    E["5. Collection<br/><b>T1114.003</b><br/>Email Collection: Email Forwarding Rule<br/><i>Mål: samla in framtida mejl</i>"]
+
+    A -->|Stulna uppgifter| B
+    B -->|Åtkomst till kontot| C
+    C -->|Intressanta användare hittas| D
+    D -->|Fortsatt informationsinsamling| E
+
+    classDef initial fill:#e8f1ff,stroke:#2563eb,color:#111827,stroke-width:2px;
+    classDef discovery fill:#f3e8ff,stroke:#7c3aed,color:#111827,stroke-width:2px;
+    classDef collection fill:#dcfce7,stroke:#16a34a,color:#111827,stroke-width:2px;
+    class A,B initial;
+    class C discovery;
+    class D,E collection;
 ```
+
+**Färgförklaring:** Blå = Initial Access, lila = Discovery och grön = Collection.
 
 Kedjan kan sammanfattas så här:
 
