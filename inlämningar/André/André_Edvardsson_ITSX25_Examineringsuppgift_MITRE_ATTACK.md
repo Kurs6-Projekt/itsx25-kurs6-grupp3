@@ -20,7 +20,7 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 **Egen bedömning:** Jag lyfte att ansvarsfördelningen ibland var otydlig trots att instruktioner fanns, särskilt vem som skulle ändra dokument, pusha till GitHub och förklara varför ändringen behövdes. Den erfarenheten har tagits med i kopplingen till Workshop 3.
 
-**Det jag kontrollerade själv:** Kompletteras av André före inlämning med vilka källor och svar jag själv har kontrollerat och om kontrollen ledde till någon ändring. AI:s kontroller ska inte redovisas som mina egna.
+**Det jag kontrollerade själv:** Jag läste igenom svaren och jämförde attackkedjan och beskrivningen av arbetssättet med gruppens dokumentation. Jag lyfte själv att det ibland var oklart vem som skulle göra ändringar och pusha till GitHub. Jag har ännu inte kontrollerat teknikernas beskrivningar direkt mot MITRE ATT&CK.
 
 ---
 
