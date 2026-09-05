@@ -1,24 +1,26 @@
-# Individuell inlämningsuppgift – Workshop 2
+# Individuell examineringsuppgift – MITRE ATT&CK och hotanalys
 
 **Kurs:** ITSX25 Kurs 6
 **Namn:** André Edvardsson
-**Datum:** 2026-08-31
+**Uppdaterad:** 2026-09-05
 
 ## Syfte och avgränsning
 
-Uppgiften följer upp Workshop 2 och behandlar MITRE ATT&CK, TTP, defensiv hotanalys, attackkedjor, försvarsfrågor, källor, spårbarhet och koppling till projektarbetet.
+Uppgiften utgår från Workshop 2 och 3 och behandlar MITRE ATT&CK, TTP, defensiv hotanalys, attackkedjor, försvarsfrågor, källor, spårbarhet och koppling till projektarbetet.
+
+Analysen bygger på gruppens tänkta scenario med ett kapat Microsoft 365-konto. Vi har inte undersökt en verklig incident eller samlat in riktiga loggar. Beskrivningar av aktivitet och signaler är därför exempel på vad ett säkerhetsteam skulle kunna leta efter, inte bekräftade fynd.
 
 Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandesteg för angrepp ska inte beskrivas.
 
 ## Redovisning av AI-användning
 
-> Beskriv om och hur en AI-assistent har använts samt vad du har kontrollerat manuellt.
-
 **Verktyg som använts:** Codex, som är en AI-assistent.
 
-**Hur verktyget användes:** Jag använde AI för att skapa en tydlig struktur, få hjälp med formuleringar och kontrollera att alla frågor blev besvarade.
+**Hur verktyget användes:** Jag använde AI för struktur, utkast till svar, formuleringar och kontroll av att alla frågor hade svar. AI hjälpte även till att jämföra del 6 med gruppens dokumentation och GitHub Issues efter Workshop 3.
 
-**Det jag kontrollerade manuellt:** Jag kontrollerade informationen om de valda teknikerna på MITRE ATT&CK och jämförde den med gruppens scenario.
+**Egen bedömning:** Jag lyfte att ansvarsfördelningen ibland var otydlig trots att instruktioner fanns, särskilt vem som skulle ändra dokument, pusha till GitHub och förklara varför ändringen behövdes. Den erfarenheten har tagits med i kopplingen till Workshop 3.
+
+**Det jag kontrollerade själv:** Kompletteras av André före inlämning med vilka källor och svar jag själv har kontrollerat och om kontrollen ledde till någon ändring. AI:s kontroller ska inte redovisas som mina egna.
 
 ---
 
@@ -180,9 +182,11 @@ För att minska risken för fel behöver man läsa hela beskrivningen på MITRE 
 
 #### Mitt svar
 
-| Steg | Varför? – Tactic | Hur? – Technique | Vad såg vi? – Procedure/observation |
+Tabellen beskriver tänkbara händelser i scenariot. Rubriken ”vad såg vi?” ska här förstås som vad vi skulle leta efter, eftersom vi inte har verkliga loggfynd.
+
+| Steg | Varför? – Tactic | Hur? – Technique | Tänkt procedure eller möjlig observation |
 | ---: | --- | --- | --- |
-| 1 | Få en första kontakt med användaren | Skicka en riktad nätfiskelänk | Ett mejl som liknar kommunikation från en känd leverantör. |
+| 1 | Förbereda en första åtkomst till miljön | Använda en riktad nätfiskelänk | Ett mejl som liknar kommunikation från en känd leverantör. |
 | 2 | Få åtkomst till molnmiljön | Använda ett giltigt men kapat konto | En inloggning sker med användarens riktiga konto från en avvikande session. |
 | 3 | Förstå organisationens konton | Söka efter molnkonton och roller | Kontot börjar göra ovanliga sökningar efter andra användare. |
 | 4 | Samla verksamhetsinformation | Söka i SharePoint | Ovanligt många dokument eller känsliga områden öppnas. |
@@ -359,13 +363,17 @@ Till sist behöver analysen ge stöd för nästa steg. Det kan vara försvarsfr�
 
 #### Mitt svar
 
-| # | Nytt eller ändrat backlog item | Kort beskrivning | Prioritet | Motivering |
-| ---: | --- | --- | --- | --- |
-| 1 | Identifiera relevanta Microsoft 365-loggar | Ta reda på vilka loggar som visar inloggningar, SharePoint-åtkomst och regeländringar. | Must | Vi behöver veta vilket underlag som krävs för att upptäcka kedjan. |
-| 2 | Undersöka MFA i scenariot | Beskriv hur MFA påverkar användningen av stulna inloggningsuppgifter. | Must | Övergången från nätfiske till kapat konto är en viktig osäkerhet. |
-| 3 | Definiera normalt användarbeteende | Bestäm vilka avvikelser som är relevanta för kontot. | Should | Det blir lättare att skilja legitim aktivitet från misstänkt aktivitet. |
-| 4 | Granska extern vidarebefordring | Undersök policy och övervakning för regler som skickar mejl externt. | Should | Regeln kan vara både legitim och skadlig. |
-| 5 | Skapa ATT&CK-visualisering | Lägg in kedjan i ATT&CK Navigator eller ett tydligt diagram. | Could | Det förbättrar presentationen men behövs inte för grundanalysen. |
+Efter Workshop 3 finns följande förbättringar i gruppens GitHub Issues. De är öppna vid uppdateringen av den här texten den 5 september 2026.
+
+| Issue | Nytt eller ändrat backlog item | Kort beskrivning | Prioritet | Motivering |
+| --- | --- | --- | --- | --- |
+| [#19](https://github.com/Kurs6-Projekt/itsx25-kurs6-grupp3/issues/19) | Identifiera relevanta loggar | Hitta minst en relevant loggkälla för varje steg i attackkedjan. | Must | Vi behöver veta vilket underlag som kan användas för att upptäcka kedjan. |
+| [#20](https://github.com/Kurs6-Projekt/itsx25-kurs6-grupp3/issues/20) | Förtydliga MFA-antagandet | Beskriv hur MFA påverkar möjligheten att använda stulna uppgifter. | Must | Övergången från nätfiske till kapat konto är en viktig osäkerhet. |
+| [#3](https://github.com/Kurs6-Projekt/itsx25-kurs6-grupp3/issues/3) | Tydligare ansvarsfördelning | Ge varje uppgift en tydlig ansvarig. | Must | Det har ibland varit oklart vem som ska göra vad, även när instruktioner finns. |
+| [#16](https://github.com/Kurs6-Projekt/itsx25-kurs6-grupp3/issues/16) | Gemensamt GitHub-arbetsflöde | Bestäm vem som ändrar, granskar och pushar. | Must | Gruppen behöver förstå både vad som ändras och varför. |
+| [#21](https://github.com/Kurs6-Projekt/itsx25-kurs6-grupp3/issues/21) | Lägg till officiella Microsoft-källor | Komplettera analysen med relevanta källor om Microsoft 365. | Should | Det gör de tekniska resonemangen lättare att kontrollera. |
+
+Visualiseringen är redan klar i [gruppens hotanalys](../../docs/workshop-2-hotanalys.md), och [Issue #15](https://github.com/Kurs6-Projekt/itsx25-kurs6-grupp3/issues/15) är stängd. Den ska därför inte längre beskrivas som en ny uppgift. De öppna förbättringarna behöver fortfarande genomföras och följas upp mot sina klarkriterier.
 
 ### Uppgift 22
 
@@ -375,11 +383,11 @@ Till sist behöver analysen ge stöd för nästa steg. Det kan vara försvarsfr�
 
 #### Mitt svar
 
-**Nuvarande Sprint Goal:** Sprintens mål är att skapa ett gemensamt arbetssätt och ett dokumenterat underlag som gör gruppen redo att påbörja en MITRE ATT&CK-baserad hotanalys.
+**Sprint 1-målet, sammanfattat:** Gruppen ska etablera ett gemensamt arbetssätt, färdigställa Team Charter och backlog samt bygga en grundläggande förståelse för MITRE ATT&CK och hotanalys. Den fullständiga formuleringen finns i [Sprint Goal och Definition of Done](../../docs/sprint-goal-and-dod.md).
 
-**Min bedömning:** Målet är fortfarande relevant och vi har till stor del uppnått det. Gruppen har skapat en attackkedja, mappat fem tekniker och dokumenterat försvarsfrågor och osäkerheter.
+**Min bedömning:** Vi har till stor del uppnått målet. Gruppen har skapat en attackkedja, mappat fem tekniker och dokumenterat försvarsfrågor och osäkerheter. Samtidigt visade Workshop 3 att arbetssättet behöver bli tydligare. Jag upplevde att det ibland var oklart vem som skulle ändra och pusha dokument, även när instruktioner fanns. Att en rutin är dokumenterad betyder därför inte att den fungerar fullt ut i praktiken.
 
-**Eventuell justering:** Nästa sprintmål bör fokusera mer på vilka loggar, signaler och skydd som behövs för att upptäcka och begränsa kedjan.
+**Förslag till nästa sprintmål:** Nästa sprint ska ge oss en mer användbar hotanalys genom tydliga MFA-antaganden och relevanta loggkällor, med en ansvarig för varje uppgift. Detta är ett förslag och inte ett nytt mål som gruppen redan har beslutat om.
 
 ### Uppgift 23
 
@@ -392,20 +400,23 @@ Till sist behöver analysen ge stöd för nästa steg. Det kan vara försvarsfr�
 1. Vilka delar av attackkedjan kunde vi mappa med bra underlag, och vilka bygger fortfarande mest på antaganden?
 2. Vilken förbättring bör prioriteras först för att göra analysen mer användbar ur ett Blue Team-perspektiv?
 
+Efter Workshop 3 är frågorna fortfarande relevanta. I [retrospektivet](../../docs/workshop-3-retrospektiv.md) lyfte gruppen både osäkerheten kring loggar och behovet av tydligare ansvar. Uppföljningen behöver därför omfatta både analysens kvalitet och hur vi fördelar arbetet.
+
 ### Uppgift 24
 
 **Förbered en kort statusrapport till Workshop 3.**
 
 > **Svarsinstruktion:** Skriv 5–7 punkter: vad ni gjorde, vad som blev klart, vad som är oklart och vad ni vill ändra.
 
-#### Min statusrapport
+#### Min statusrapport, uppdaterad efter Workshop 3
 
 - **Detta gjorde vi:** Vi valde ett scenario med ett kapat Microsoft 365-konto och byggde en attackkedja med fem steg.
 - **Detta blev klart:** Alla steg kopplades till tactics, techniques och ATT&CK-ID.
-- **Detta blev också klart:** Vi skrev minst en försvarsfråga per steg och dokumenterade våra viktigaste osäkerheter.
+- **Detta blev också klart:** Vi skrev minst en försvarsfråga per steg, dokumenterade våra viktigaste osäkerheter och skapade ett diagram över attackkedjan.
 - **Detta är fortfarande oklart:** Vi vet inte exakt vilka Microsoft 365-loggar som ger bäst möjlighet att upptäcka hela kedjan.
 - **Detta behöver följas upp:** MFA, normalt användarbeteende och extern vidarebefordring behöver undersökas mer.
-- **Detta vill vi ändra eller förbättra:** Vi vill uppdatera backloggen och skapa en tydligare visuell ATT&CK-mappning.
+- **Detta lärde vi oss om arbetssättet:** Ansvar för uppgifter, ändringar och pushar behöver vara tydligare, vilket också togs upp i retrospektivet.
+- **Detta tar vi vidare:** Förbättringarna finns som prioriterade Issues. Nästa steg är att fördela ansvar och genomföra dem, bland annat arbetet med loggkällor och MFA.
 
 ---
 
