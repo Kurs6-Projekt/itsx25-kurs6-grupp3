@@ -2,7 +2,7 @@
 
 **Kurs:** ITSX25 Kurs 6
 **Namn:** André Edvardsson
-**Uppdaterad:** 2026-09-05
+**Uppdaterad:** 2026-09-06
 
 ## Syfte och avgränsning
 
@@ -22,6 +22,8 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 **Det jag kontrollerade själv:** Jag läste igenom svaren och jämförde attackkedjan och beskrivningen av arbetssättet med gruppens dokumentation. Jag lyfte själv att det ibland var oklart vem som skulle göra ändringar och pusha till GitHub. Jag har ännu inte kontrollerat teknikernas beskrivningar direkt mot MITRE ATT&CK.
 
+**Källkontroll med AI-stöd:** Den 6 september 2026 använde jag Codex för att kontrollera MITRE-sidornas tekniknamn, ID, tactics och beskrivningar mot texten. Kontrollen omfattade även Enterprise Matrix och CISA:s vägledning om mappning. Den ledde till att det första steget preciserades till T1598.003 under Reconnaissance. Detta är AI-assistentens källkontroll, inte en manuell kontroll som jag själv har gjort.
+
 ---
 
 ## Del 1 – Förstå MITRE ATT&CK som analysramverk
@@ -36,7 +38,7 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 MITRE ATT&CK är ett ramverk som samlar information om hur angripare brukar bete sig. Ett säkerhetsteam kan använda det för att beskriva en attack på ett mer ordnat sätt. I stället för att bara säga att ett konto blev kapat kan man visa vilket mål angriparen hade och vilka tekniker som användes på vägen.
 
-En viktig del är att ATT&CK ger ett gemensamt språk. Teknikerna har namn och ID, vilket gör det lättare för olika personer att förstå varandra. En analytiker kan till exempel hänvisa till `T1566.002 – Spearphishing Link` i stället för att bara skriva att användaren klickade på en misstänkt länk.
+En viktig del är att ATT&CK ger ett gemensamt språk. Teknikerna har namn och ID, vilket gör det lättare för olika personer att förstå varandra. En analytiker kan till exempel hänvisa till `T1598.003 – Spearphishing Link` i stället för att bara skriva att användaren klickade på en misstänkt länk.
 
 Ramverket kan också användas ur ett försvarsperspektiv. När teamet har identifierat relevanta tekniker kan det undersöka vilka loggar och signaler som finns, vad som går att upptäcka och var försvaret har luckor. Det hjälper teamet att prioritera vilka kontroller som behöver förbättras.
 
@@ -104,7 +106,7 @@ ATT&CK kan även stödja prioritering. Teamet kan välja de tekniker som är mes
 
 | Begrepp | Förklaring med egna ord | Del av mitt defensiva exempel |
 | --- | --- | --- |
-| Tactic | Angriparens övergripande mål, alltså varför något görs. | Målet är att få en första väg in i Microsoft 365-miljön. |
+| Tactic | Angriparens övergripande mål, alltså varför något görs. | Reconnaissance: samla in uppgifter som kan användas för senare åtkomst till Microsoft 365. |
 | Technique | Metoden eller beteendet som används för att nå målet. | Ett mejl innehåller en länk till en falsk inloggningssida. |
 | Procedure | Hur tekniken visar sig i det aktuella scenariot. | Mejlet ser ut att komma från en leverantör och handlar om en uppdaterad offert. |
 
@@ -118,7 +120,7 @@ ATT&CK kan även stödja prioritering. Teamet kan välja de tekniker som är mes
 
 | # | Tactic | Technique och ID | Kort procedure-beskrivning |
 | ---: | --- | --- | --- |
-| 1 | Initial Access | T1566.002 – Spearphishing Link | Användaren får ett leverantörsmejl med en länk som leder till en falsk Microsoft 365-inloggning. |
+| 1 | Reconnaissance | T1598.003 – Phishing for Information: Spearphishing Link | Användaren får ett leverantörsmejl med en länk som leder till en falsk Microsoft 365-inloggning där uppgifterna samlas in. |
 | 2 | Discovery | T1087.004 – Account Discovery: Cloud Account | Efter inloggningen försöker angriparen förstå vilka användare och roller som finns i molnmiljön. |
 | 3 | Collection | T1114.003 – Email Forwarding Rule | En regel skapas som kan skicka utvalda mejl vidare till en extern adress. |
 
@@ -168,11 +170,13 @@ För att minska risken för fel behöver man läsa hela beskrivningen på MITRE 
 
 | Steg | Tactic | Technique och ID | Övergripande händelse |
 | ---: | --- | --- | --- |
-| 1 | Initial Access | T1566.002 – Spearphishing Link | Ett falskt leverantörsmejl leder till en falsk Microsoft 365-sida. |
+| 1 | Reconnaissance | T1598.003 – Phishing for Information: Spearphishing Link | Ett falskt leverantörsmejl leder till en falsk Microsoft 365-sida som samlar in inloggningsuppgifter. |
 | 2 | Initial Access | T1078.004 – Valid Accounts: Cloud Accounts | De komprometterade uppgifterna används för att logga in på molnkontot. |
 | 3 | Discovery | T1087.004 – Account Discovery: Cloud Account | Angriparen undersöker vilka andra konton och roller som finns. |
 | 4 | Collection | T1213.002 – Data from Information Repositories: SharePoint | Information söks fram i organisationens SharePoint. |
 | 5 | Collection | T1114.003 – Email Collection: Email Forwarding Rule | En regel skapas för att vidarebefordra vissa mejl. |
+
+**Precisering efter källkontrollen:** Gruppens ursprungliga kedja använde T1566.002 under Initial Access. I denna individuella text används i stället [T1598.003](https://attack.mitre.org/techniques/T1598/003/), eftersom MITRE där uttryckligen beskriver falska inloggningssidor som samlar in uppgifter. Tekniken ligger under Reconnaissance. Själva åtkomsten sker i steg 2 genom T1078.004. Händelseförloppet är detsamma, men mappningen är mer precis. Alla fem valda ID:n avser sub-techniques, alltså undertekniker.
 
 ### Uppgift 10
 
@@ -186,7 +190,7 @@ Tabellen beskriver tänkbara händelser i scenariot. Rubriken ”vad såg vi?”
 
 | Steg | Varför? – Tactic | Hur? – Technique | Tänkt procedure eller möjlig observation |
 | ---: | --- | --- | --- |
-| 1 | Förbereda en första åtkomst till miljön | Använda en riktad nätfiskelänk | Ett mejl som liknar kommunikation från en känd leverantör. |
+| 1 | Samla in uppgifter inför senare åtkomst | Använda en riktad nätfiskelänk för informationsinsamling | Ett mejl som liknar kommunikation från en känd leverantör leder till en falsk inloggningssida. |
 | 2 | Få åtkomst till molnmiljön | Använda ett giltigt men kapat konto | En inloggning sker med användarens riktiga konto från en avvikande session. |
 | 3 | Förstå organisationens konton | Söka efter molnkonton och roller | Kontot börjar göra ovanliga sökningar efter andra användare. |
 | 4 | Samla verksamhetsinformation | Söka i SharePoint | Ovanligt många dokument eller känsliga områden öppnas. |
@@ -215,7 +219,7 @@ Tabellen beskriver tänkbara händelser i scenariot. Rubriken ”vad såg vi?”
 #### Min attackkedja
 
 ```text
-[Falsk leverantörslänk – T1566.002]
+[Falsk leverantörslänk – T1598.003]
     ↓
 [Kapat molnkonto – T1078.004]
     ↓
@@ -240,7 +244,7 @@ Tabellen beskriver tänkbara händelser i scenariot. Rubriken ”vad såg vi?”
 
 | Steg | Technique | Försvarsfråga |
 | ---: | --- | --- |
-| 1 | T1566.002 | Hur kan vi se att länken leder till en domän som inte tillhör den förväntade tjänsten? |
+| 1 | T1598.003 | Hur kan vi se att länken leder till en domän som inte tillhör den förväntade tjänsten? |
 | 2 | T1078.004 | Hur upptäcker vi att en inloggning med rätt konto ändå är ovanlig? |
 | 3 | T1087.004 | Hur märker vi att kontot börjar söka efter fler användare än normalt? |
 | 4 | T1213.002 | Hur kan vi upptäcka ovanligt omfattande läsning eller nedladdning från SharePoint? |
@@ -269,7 +273,7 @@ Tabellen beskriver tänkbara händelser i scenariot. Rubriken ”vad såg vi?”
 
 | Technique och ID | Organisatoriska åtgärder | Tekniska åtgärder | Processmässiga åtgärder |
 | --- | --- | --- | --- |
-| T1566.002 – Spearphishing Link | Utbilda användare att kontrollera länkar och rapportera misstänkta mejl. | E-postfiltrering, domänkontroller och skydd mot kända skadliga länkar. | Ha en tydlig rutin för rapportering och snabb spärr av misstänkta länkar. |
+| T1598.003 – Spearphishing Link | Utbilda användare att kontrollera länkar och rapportera misstänkta mejl. | E-postfiltrering, domänkontroller och skydd mot kända skadliga länkar. | Ha en tydlig rutin för rapportering och snabb spärr av misstänkta länkar. |
 | T1078.004 – Valid Accounts: Cloud Accounts | Informera användare om att aldrig godkänna oväntade MFA-förfrågningar. | MFA, villkorsstyrd åtkomst och begränsade behörigheter. | Regelbunden granskning av inloggningar och snabb återställning av misstänkta konton. |
 
 ### Uppgift 16
@@ -300,12 +304,19 @@ Kedjan behöver följas upp när miljön eller hotbilden ändras. Teamet kan lä
 
 #### Mitt svar
 
-| # | Källa och länk | Vad bidrar källan med? | Hämtad/kontrollerad datum |
+Datumen nedan gäller Codex källkontroll. De betyder inte att jag själv har läst källorna manuellt.
+
+| # | Källa och länk | Vad bidrar källan med? | Kontrollerad av Codex |
 | ---: | --- | --- | --- |
-| 1 | [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/) | Visar ramverkets tactics och vilka tekniker som hör till dem. | 2026-08-31 |
-| 2 | [MITRE – Spearphishing Link](https://attack.mitre.org/techniques/T1566/002/) | Ger teknikens namn, ID, tactic och beskrivning. | 2026-08-31 |
-| 3 | [MITRE – Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004/) | Förklarar hur giltiga molnkonton kan missbrukas och vilka tactics som är relevanta. | 2026-08-31 |
-| 4 | [CISA – Best Practices for MITRE ATT&CK Mapping](https://www.cisa.gov/news-events/news/best-practices-mitre-attckr-mapping) | Ger vägledning om att mappa observationer noggrant och dokumentera sammanhanget. | 2026-08-31 |
+| 1 | [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/) | Visar ramverkets tactics och tekniker. | 2026-09-06 |
+| 2 | [MITRE – Phishing for Information: Spearphishing Link](https://attack.mitre.org/techniques/T1598/003/) | Beskriver insamling av uppgifter genom falska inloggningssidor och stödjer preciseringen av steg 1. | 2026-09-06 |
+| 3 | [MITRE – Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004/) | Stödjer användningen av ett kapat molnkonto som Initial Access i steg 2. | 2026-09-06 |
+| 4 | [CISA – Best Practices for MITRE ATT&CK Mapping](https://www.cisa.gov/news-events/news/best-practices-mitre-attckr-mapping) | Introducerar vägledningen om mappning, sammanhang och vanliga analysfel. | 2026-09-06, via sökverktygets sidtext |
+| 5 | [MITRE – Account Discovery: Cloud Account](https://attack.mitre.org/techniques/T1087/004/) | Stödjer kartläggning av molnkonton under Discovery i steg 3. | 2026-09-06 |
+| 6 | [MITRE – Data from Information Repositories: Sharepoint](https://attack.mitre.org/techniques/T1213/002/) | Stödjer informationsinsamling från SharePoint under Collection i steg 4. | 2026-09-06 |
+| 7 | [MITRE – Email Collection: Email Forwarding Rule](https://attack.mitre.org/techniques/T1114/003/) | Stödjer insamling av mejl genom vidarebefordringsregler under Collection i steg 5. | 2026-09-06 |
+
+**Kontrollens omfattning:** MITRE-sidorna kunde läsas och de fem stegens namn, ID, tactics och övergripande beteenden jämfördes med texten. T1566.002 jämfördes också med T1598.003. I uppgift 7 kontrollerades sidorna för T1566, T1078 och T1190. CISA:s presentationssida kunde läsas via sökverktygets sidtext, men direktöppning av sidan och den länkade PDF-versionen misslyckades. Hela CISA-guiden har därför inte verifierats i denna kontroll. Kontrollen visar stöd för mappningen av scenariot, inte att en verklig attack har inträffat.
 
 ### Uppgift 18
 
@@ -315,9 +326,9 @@ Kedjan behöver följas upp när miljön eller hotbilden ändras. Teamet kan lä
 
 #### Mitt svar
 
-Jag börjar med att läsa teknikens fullständiga beskrivning på MITRE ATT&CK och kontrollerar att både beteendet och tacticen passar vårt scenario. Jag väljer alltså inte en teknik bara för att namnet låter rätt. Sedan skriver jag en kort motivering som kopplar observationen i scenariot till teknikens beskrivning.
+För att säkerställa mappningen behöver teknikens beskrivning på MITRE ATT&CK jämföras med beteendet och målet i scenariot. Namnet ensamt räcker inte. Codex gjorde en sådan källkontroll den 6 september och preciserade det första steget till T1598.003. Motiveringen och källan finns vid attackkedjan. Min egen manuella kontroll av MITRE-sidorna återstår.
 
-Om information saknas markerar jag vad som är ett antagande och vad som faktiskt är känt. Jag jämför också med andra möjliga tekniker om mappningen är osäker. Källan och länken dokumenteras så att någon annan kan kontrollera samma information. Till sist låter jag en annan gruppmedlem läsa mappningen. Om personen inte förstår sambandet eller hittar en bättre teknik behöver valet diskuteras och eventuellt ändras.
+Om information saknas behöver det framgå vad som är ett antagande. Alternativa tekniker bör jämföras och valet motiveras med källor. I detta fall är hela händelseförloppet ett tänkt scenario. Den uppdaterade mappningen bör även granskas av en annan gruppmedlem, så att eventuella fel eller otydligheter kan fångas upp.
 
 ### Uppgift 19
 
