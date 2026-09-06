@@ -20,9 +20,9 @@ Fokus ska ligga på analys, dokumentation och försvar. Tekniska genomförandest
 
 **Egen bedömning:** Jag lyfte att ansvarsfördelningen ibland var otydlig trots att instruktioner fanns, särskilt vem som skulle ändra dokument, pusha till GitHub och förklara varför ändringen behövdes. Den erfarenheten har tagits med i kopplingen till Workshop 3.
 
-**Det jag kontrollerade själv:** Jag läste igenom svaren och jämförde attackkedjan och beskrivningen av arbetssättet med gruppens dokumentation. Jag lyfte själv att det ibland var oklart vem som skulle göra ändringar och pusha till GitHub. Jag har ännu inte kontrollerat teknikernas beskrivningar direkt mot MITRE ATT&CK.
+**Det jag kontrollerade själv:** Jag läste igenom svaren och jämförde attackkedjan och beskrivningen av arbetssättet med gruppens dokumentation.
 
-**Källkontroll med AI-stöd:** Den 6 september 2026 använde jag Codex för att kontrollera MITRE-sidornas tekniknamn, ID, tactics och beskrivningar mot texten. Kontrollen omfattade även Enterprise Matrix och CISA:s vägledning om mappning. Den ledde till att det första steget preciserades till T1598.003 under Reconnaissance. Detta är AI-assistentens källkontroll, inte en manuell kontroll som jag själv har gjort.
+**Källkontroll med AI-stöd:** Den 6 september 2026 använde jag Codex för att kontrollera MITRE-sidornas tekniknamn, ID, tactics och beskrivningar mot texten. Kontrollen omfattade även Enterprise Matrix och CISA:s vägledning om mappning. Den ledde till att det första steget preciserades till T1598.003 under Reconnaissance.
 
 ---
 
